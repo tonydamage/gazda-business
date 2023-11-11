@@ -109,7 +109,7 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_pgn6h")
 animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.842025
+frame_progress = 0.127215
 
 [node name="DogCollider" type="CollisionShape2D" parent="."]
 rotation = 1.5708
