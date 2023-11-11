@@ -1,13 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1spiqpafed37"]
+[gd_scene load_steps=9 format=3 uid="uid://c1spiqpafed37"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_a86jg"]
 [ext_resource type="Script" path="res://scripts/SheepPen.gd" id="2_ld6np"]
 [ext_resource type="PackedScene" uid="uid://blchuywajdsdc" path="res://assets/dog.tscn" id="3_o0r1p"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="4_njgos"]
-[ext_resource type="PackedScene" uid="uid://cui6mfu152oaf" path="res://assets/plot_back.tscn" id="6_q23lf"]
+[ext_resource type="PackedScene" uid="uid://bqyi1vo8r7kjd" path="res://assets/plot.tscn" id="5_ogcos"]
 [ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="6_xonnp"]
-[ext_resource type="PackedScene" uid="uid://ce1kranhyatpi" path="res://assets/plot_side.tscn" id="7_dh5fn"]
-[ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="7_m4ckq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mguhg"]
 size = Vector2(544, 192)
@@ -50,41 +48,32 @@ shape = SubResource("RectangleShape2D_mguhg")
 [node name="Polygon2D" type="Polygon2D" parent="SheepPen"]
 position = Vector2(-160, -48)
 scale = Vector2(2, 2)
-color = Color(0.207843, 0.298039, 0.109804, 1)
+color = Color(0.34902, 0.2, 0, 1)
 polygon = PackedVector2Array(-8, -8, 264, -8, 264, 88, -8, 88)
-
-[node name="plot_back" parent="." instance=ExtResource("6_q23lf")]
-position = Vector2(-285, -1020)
 
 [node name="Dog" parent="." instance=ExtResource("3_o0r1p")]
 position = Vector2(264, 832)
 collision_mask = 3
+speed = 400
 
 [node name="Sheep3" parent="." instance=ExtResource("4_njgos")]
-position = Vector2(347, 654)
+position = Vector2(376, 688)
+
+[node name="Plot" parent="." instance=ExtResource("5_ogcos")]
+position = Vector2(0, 152)
+
+[node name="Plot2" parent="." instance=ExtResource("5_ogcos")]
+position = Vector2(75, 152)
 
 [node name="Collider na rohy" type="StaticBody2D" parent="."]
 position = Vector2(-168, -208)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collider na rohy"]
-position = Vector2(183, 449)
+position = Vector2(176, 440)
 rotation = -0.410152
 scale = Vector2(2.5, 2.5)
 skew = 0.867429
 shape = SubResource("SegmentShape2D_ur5as")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collider na rohy"]
-position = Vector2(690, 447)
-rotation = 1.82561
-scale = Vector2(2.5, 2.5)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_m4ckq")
-volume_db = -2.812
-autoplay = true
-
-[node name="plot_side" parent="." instance=ExtResource("7_dh5fn")]
-position = Vector2(-32, 40)
 
 [connection signal="allSheepInArea" from="SheepPen" to="." method="_on_sheep_pen_all_sheep_in_area"]

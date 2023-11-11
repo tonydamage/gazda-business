@@ -21,7 +21,8 @@ func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseMotion:
 		if event.button_mask == MOUSE_BUTTON_MASK_LEFT:
 			#get_parent().velocity = event.velocity
-			get_parent().velocity = (event.global_position - get_parent().global_position) * 60
+			get_parent().velocity = (event.position - get_parent().global_position) / get_physics_process_delta_time()
+			print_debug(event.global_position, get_parent().velocity)
 			get_parent().move_and_slide()
 		else:
 			print_debug("Drag stop")

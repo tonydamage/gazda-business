@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hfb8uyfo4o7t"
-path="res://.godot/imported/Strom.png-cf0f3a1f64f9f382ba467168293d7a9a.ctex"
+uid="uid://6gy5vl2riidv"
+path="res://.godot/imported/darktrava.png-81b41fb60c8bf0e8d6ba9213efd5fbd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Strom.png"
-dest_files=["res://.godot/imported/Strom.png-cf0f3a1f64f9f382ba467168293d7a9a.ctex"]
+source_file="res://art/darktrava.png"
+dest_files=["res://.godot/imported/darktrava.png-81b41fb60c8bf0e8d6ba9213efd5fbd2.ctex"]
 
 [params]
 

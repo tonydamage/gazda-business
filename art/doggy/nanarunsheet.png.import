@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hfb8uyfo4o7t"
-path="res://.godot/imported/Strom.png-cf0f3a1f64f9f382ba467168293d7a9a.ctex"
+uid="uid://1rcuag2bp2l7"
+path="res://.godot/imported/nanarunsheet.png-d2784ac55eb09f0626cd244061720852.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Strom.png"
-dest_files=["res://.godot/imported/Strom.png-cf0f3a1f64f9f382ba467168293d7a9a.ctex"]
+source_file="res://art/doggy/nanarunsheet.png"
+dest_files=["res://.godot/imported/nanarunsheet.png-d2784ac55eb09f0626cd244061720852.ctex"]
 
 [params]
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://blchuywajdsdc"]
+[gd_scene load_steps=19 format=3 uid="uid://blchuywajdsdc"]
 
 [ext_resource type="Script" path="res://scripts/dog.gd" id="1_nj7g0"]
 [ext_resource type="Texture2D" uid="uid://crjxbk4upcq5p" path="res://art/dogoanimationidle-Sheet.png" id="3_75qpg"]
 [ext_resource type="Script" path="res://assets/Dragable.gd" id="3_pie8h"]
 [ext_resource type="Texture2D" uid="uid://cklye22secvly" path="res://art/doggy/nana.png" id="3_quv67"]
+[ext_resource type="AudioStream" uid="uid://bf6m2nj76bg4c" path="res://art/Audio/running-in-grass-6237.mp3" id="5_ncg5v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yu4if"]
 atlas = ExtResource("3_75qpg")
@@ -86,11 +87,17 @@ radius = 83.3847
 [sub_resource type="CircleShape2D" id="CircleShape2D_3d0m8"]
 radius = 56.5685
 
-[node name="Dog" type="CharacterBody2D"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_q2qm0"]
+streams_count = 1
+stream_0/stream = ExtResource("5_ncg5v")
+stream_0/weight = 1.0
+
+[node name="Dog" type="CharacterBody2D" node_paths=PackedStringArray("WalkSound")]
 collision_layer = 2
 collision_mask = 7
 motion_mode = 1
 script = ExtResource("1_nj7g0")
+WalkSound = NodePath("LiveDogWalking")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -121,5 +128,9 @@ script = ExtResource("3_pie8h")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dragable"]
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_3d0m8")
+
+[node name="LiveDogWalking" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_q2qm0")
+volume_db = -36.541
 
 [connection signal="input_event" from="Dragable" to="Dragable" method="_on_input_event"]
