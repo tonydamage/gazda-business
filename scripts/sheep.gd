@@ -22,5 +22,4 @@ func _integrate_forces(state):
 
 
 func _on_audio_stream_player_finished():
-	print("I am sad")
 	reset = true
