@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://blchuywajdsdc"]
+[gd_scene load_steps=8 format=3 uid="uid://blchuywajdsdc"]
 
 [ext_resource type="Script" path="res://scripts/dog.gd" id="1_nj7g0"]
 [ext_resource type="Texture2D" uid="uid://bf4ap7r0bf43d" path="res://art/doggy/doggy.png" id="1_qpfv8"]
+[ext_resource type="Script" path="res://assets/Dragable.gd" id="3_pie8h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7g4ms"]
 animations = [{
@@ -19,6 +20,9 @@ radius = 16.6208
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r2kcd"]
 radius = 83.3847
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3d0m8"]
+radius = 56.5685
 
 [node name="Dog" type="CharacterBody2D"]
 collision_layer = 2
@@ -44,3 +48,13 @@ collision_mask = 0
 [node name="Collider" type="CollisionShape2D" parent="SheepCollider"]
 shape = SubResource("CircleShape2D_r2kcd")
 debug_color = Color(0.701961, 0.454902, 0.494118, 0.419608)
+
+[node name="Dragable" type="Area2D" parent="."]
+collision_layer = 8388608
+collision_mask = 8388608
+script = ExtResource("3_pie8h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dragable"]
+shape = SubResource("CircleShape2D_3d0m8")
+
+[connection signal="input_event" from="Dragable" to="Dragable" method="_on_input_event"]
