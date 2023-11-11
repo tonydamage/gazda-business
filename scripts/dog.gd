@@ -6,6 +6,7 @@ var screen_size # Size of the game window.
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -21,7 +22,13 @@ func _process(_delta):
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		$Sprite.play()
+		$AnimatedSprite2D.play()
 	else:
-		$Sprite.stop()
+		$AnimatedSprite2D.stop()
+		
+	if velocity.x != 0:
+		$AnimatedSprite2D.animation = "walk"
+		$AnimatedSprite2D.flip_v = false
+		$AnimatedSprite2D.flip_h = velocity.x > 0
+		
 	move_and_slide()

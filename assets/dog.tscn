@@ -1,17 +1,82 @@
-[gd_scene load_steps=8 format=3 uid="uid://blchuywajdsdc"]
+[gd_scene load_steps=17 format=3 uid="uid://blchuywajdsdc"]
 
 [ext_resource type="Script" path="res://scripts/dog.gd" id="1_nj7g0"]
-[ext_resource type="Texture2D" uid="uid://bf4ap7r0bf43d" path="res://art/doggy/doggy.png" id="1_qpfv8"]
+[ext_resource type="Texture2D" uid="uid://crjxbk4upcq5p" path="res://art/dogoanimationidle-Sheet.png" id="3_75qpg"]
 [ext_resource type="Script" path="res://assets/Dragable.gd" id="3_pie8h"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7g4ms"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu4if"]
+atlas = ExtResource("3_75qpg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckyeb"]
+atlas = ExtResource("3_75qpg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i54ia"]
+atlas = ExtResource("3_75qpg")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wb6ai"]
+atlas = ExtResource("3_75qpg")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtb44"]
+atlas = ExtResource("3_75qpg")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6x77p"]
+atlas = ExtResource("3_75qpg")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y2l7"]
+atlas = ExtResource("3_75qpg")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rn6vw"]
+atlas = ExtResource("3_75qpg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mohgp"]
+atlas = ExtResource("3_75qpg")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pgn6h"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_qpfv8")
+"texture": SubResource("AtlasTexture_yu4if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckyeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i54ia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wb6ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtb44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x77p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4y2l7")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rn6vw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mohgp")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -31,10 +96,10 @@ motion_mode = 1
 script = ExtResource("1_nj7g0")
 metadata/_edit_group_ = true
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_7g4ms")
+sprite_frames = SubResource("SpriteFrames_pgn6h")
+animation = &"idle"
 
 [node name="DogCollider" type="CollisionShape2D" parent="."]
 rotation = 1.5708

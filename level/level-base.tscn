@@ -1,13 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1spiqpafed37"]
+[gd_scene load_steps=9 format=3 uid="uid://c1spiqpafed37"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_a86jg"]
 [ext_resource type="Script" path="res://scripts/SheepPen.gd" id="2_ld6np"]
 [ext_resource type="PackedScene" uid="uid://blchuywajdsdc" path="res://assets/dog.tscn" id="3_o0r1p"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="4_njgos"]
 [ext_resource type="PackedScene" uid="uid://bqyi1vo8r7kjd" path="res://assets/plot.tscn" id="5_ogcos"]
+[ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="6_xonnp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mguhg"]
 size = Vector2(544, 192)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ur5as"]
+a = Vector2(9.16033, -24.4604)
+b = Vector2(6.34161, 34.916)
 
 [node name="BaseLevel" type="Node"]
 script = ExtResource("1_a86jg")
@@ -19,6 +24,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.415686, 0.745098, 0.188235, 1)
+
+[node name="Trava1" type="Sprite2D" parent="."]
+position = Vector2(400, 816)
+scale = Vector2(3, 3)
+texture = ExtResource("6_xonnp")
 
 [node name="LevelBoundary" type="StaticBody2D" parent="."]
 
@@ -49,6 +59,20 @@ collision_mask = 3
 position = Vector2(376, 688)
 
 [node name="Plot" parent="." instance=ExtResource("5_ogcos")]
-position = Vector2(0, 168)
+position = Vector2(0, 152)
+
+[node name="Plot2" parent="." instance=ExtResource("5_ogcos")]
+position = Vector2(75, 152)
+
+[node name="Collider na rohy" type="StaticBody2D" parent="."]
+position = Vector2(-168, -208)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collider na rohy"]
+position = Vector2(176, 440)
+rotation = -0.410152
+scale = Vector2(2.5, 2.5)
+skew = 0.867429
+shape = SubResource("SegmentShape2D_ur5as")
 
 [connection signal="allSheepInArea" from="SheepPen" to="." method="_on_sheep_pen_all_sheep_in_area"]
