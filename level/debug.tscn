@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://b63fo3txofrch"]
+
+[ext_resource type="PackedScene" uid="uid://c1spiqpafed37" path="res://level/level-base.tscn" id="1_h6c4r"]
+[ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="2_51jb1"]
+
+[node name="BaseLevel" instance=ExtResource("1_h6c4r")]
+
+[node name="RigidBody2D" type="StaticBody2D" parent="." index="4"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D" index="0"]
+polygon = PackedVector2Array(-16, 432, 56, 456, 136, 480, 224, 480, 288, 488, 320, 544, 280, 584, 208, 592, 112, 616, 56, 632, -8, 672, -24, 704, -40, 384)
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D" index="1"]
+polygon = PackedVector2Array(-24, 424, 136, 480, 224, 480, 288, 488, 320, 544, 280, 584, 208, 592, 104, 616, 48, 632, -8, 672)
+
+[node name="Sheep" parent="." index="5" instance=ExtResource("2_51jb1")]
+position = Vector2(416, 624)
+
+[node name="Sheep2" parent="." index="6" instance=ExtResource("2_51jb1")]
+position = Vector2(472, 512)
+
+[node name="Sheep4" parent="." index="7" instance=ExtResource("2_51jb1")]
+position = Vector2(272, 368)
+
+[node name="Sheep5" parent="." index="8" instance=ExtResource("2_51jb1")]
+position = Vector2(176, 328)
