@@ -15,11 +15,11 @@ position = Vector2(150.8, 401.2)
 texture = ExtResource("1_e15qr")
 
 [node name="H1Plot3" type="Sprite2D" parent="."]
-position = Vector2(176, 401.2)
+position = Vector2(175.769, 401.154)
 texture = ExtResource("1_e15qr")
 
 [node name="H1Plot4" type="Sprite2D" parent="."]
-position = Vector2(201.2, 401.2)
+position = Vector2(201.154, 401.154)
 texture = ExtResource("1_e15qr")
 
 [node name="H1Plot5" type="Sprite2D" parent="."]
