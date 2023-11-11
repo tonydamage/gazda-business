@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://cui6mfu152oaf"]
+
+[ext_resource type="Texture2D" uid="uid://ikpwbuscwrh" path="res://art/h1plot.png" id="1_e15qr"]
+
+[node name="plot_back" type="Sprite2D"]
+position = Vector2(-285, -1021)
+scale = Vector2(2.6, 2.6)
+
+[node name="H1Plot" type="Sprite2D" parent="."]
+position = Vector2(125.6, 401.2)
+texture = ExtResource("1_e15qr")
+
+[node name="H1Plot2" type="Sprite2D" parent="."]
+position = Vector2(150.8, 401.2)
+texture = ExtResource("1_e15qr")
+
+[node name="H1Plot3" type="Sprite2D" parent="."]
+position = Vector2(176, 401.2)
+texture = ExtResource("1_e15qr")
+
+[node name="H1Plot4" type="Sprite2D" parent="."]
+position = Vector2(201.2, 401.2)
+texture = ExtResource("1_e15qr")
+
+[node name="H1Plot5" type="Sprite2D" parent="."]
+position = Vector2(226, 401.2)
+texture = ExtResource("1_e15qr")
+
+[node name="H1Plot6" type="Sprite2D" parent="."]
+position = Vector2(251.2, 401.2)
+texture = ExtResource("1_e15qr")
+
+[node name="H1Plot7" type="Sprite2D" parent="."]
+position = Vector2(276.4, 401.2)
+texture = ExtResource("1_e15qr")
+
+[node name="H1Plot8" type="Sprite2D" parent="."]
+position = Vector2(301.6, 401.2)
+texture = ExtResource("1_e15qr")

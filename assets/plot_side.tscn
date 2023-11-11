@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce1kranhyatpi"]
+
+[ext_resource type="Texture2D" uid="uid://csb5wexfi2n8b" path="res://art/v1plot.png" id="1_fiway"]
+[ext_resource type="Texture2D" uid="uid://b5wg020ghqi2l" path="res://art/v2plot.png" id="2_n0ibj"]
+
+[node name="plot_side" type="Sprite2D"]
+position = Vector2(-27, -20)
+scale = Vector2(2.6, 2.6)
+
+[node name="V1Plot" type="Sprite2D" parent="."]
+position = Vector2(16, 57)
+texture = ExtResource("1_fiway")
+
+[node name="V2Plot" type="Sprite2D" parent="."]
+position = Vector2(16, 41)
+texture = ExtResource("2_n0ibj")
+
+[node name="V2Plot2" type="Sprite2D" parent="."]
+position = Vector2(16, 25)
+texture = ExtResource("2_n0ibj")
