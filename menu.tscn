@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dknxuxjtx6yk5"]
+[gd_scene load_steps=9 format=3 uid="uid://xvk36x75tqq"]
 
 [ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="1_q3wwd"]
 [ext_resource type="Script" path="res://StartButton.gd" id="1_wvhom"]

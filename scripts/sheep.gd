@@ -11,6 +11,7 @@ func _ready():
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
+	reset = true
 	if AppearEffect != null:
 		AppearEffect.play()
 	
@@ -19,7 +20,3 @@ func _integrate_forces(state):
 	if reset:
 		state.transform = Transform2D(0, start_pos)
 		reset = false
-
-
-func _on_audio_stream_player_finished():
-	reset = true

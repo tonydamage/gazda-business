@@ -4,11 +4,11 @@
 [ext_resource type="Script" path="res://scripts/SheepPen.gd" id="2_ld6np"]
 [ext_resource type="PackedScene" uid="uid://blchuywajdsdc" path="res://assets/dog.tscn" id="3_o0r1p"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="4_njgos"]
-[ext_resource type="PackedScene" uid="uid://cui6mfu152oaf" path="res://assets/plot_back.tscn" id="6_q23lf"]
+[ext_resource type="PackedScene" path="res://assets/plot_back.tscn" id="6_q23lf"]
 [ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="6_xonnp"]
-[ext_resource type="PackedScene" uid="uid://ce1kranhyatpi" path="res://assets/plot_side.tscn" id="7_dh5fn"]
+[ext_resource type="PackedScene" path="res://assets/plot_side.tscn" id="7_dh5fn"]
 [ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="7_m4ckq"]
-[ext_resource type="PackedScene" uid="uid://dks6bgrce6eak" path="res://assets/plot_front.tscn" id="9_rf1po"]
+[ext_resource type="PackedScene" path="res://assets/plot_front.tscn" id="9_rf1po"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mguhg"]
 size = Vector2(544, 216)
