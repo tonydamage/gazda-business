@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://msxtlq7c6emo"
-path="res://.godot/imported/plotsam.png-6482504e4c052d03f3c43d76567c3d7b.ctex"
+uid="uid://diem7kwb24bpy"
+path="res://.godot/imported/pasak-Sheet.png-0d79bb0c2e2b6cd5b384a3d17f7d9e9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/plotsam.png"
-dest_files=["res://.godot/imported/plotsam.png-6482504e4c052d03f3c43d76567c3d7b.ctex"]
+source_file="res://art/sheep/pasak-Sheet.png"
+dest_files=["res://.godot/imported/pasak-Sheet.png-0d79bb0c2e2b6cd5b384a3d17f7d9e9d.ctex"]
 
 [params]
 

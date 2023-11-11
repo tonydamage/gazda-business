@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cujkponbs8jkv"]
+
+[ext_resource type="PackedScene" uid="uid://c1spiqpafed37" path="res://level/level-base.tscn" id="1_poojm"]
+
+[node name="BaseLevel" instance=ExtResource("1_poojm")]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBoundary" index="1"]
+polygon = PackedVector2Array(552, 616, 528, 560, 496, 528, 432, 520, 360, 528, 288, 552, 232, 600, 200, 632, 168, 648, 136, 640, 128, 600, 152, 552, 208, 512, 280, 480, 352, 440, 400, 392, 424, 336, 424, 296, 392, 248, 352, 232, 336, 216, 592, 216, 768, 696, 680, 1056, 208, 1056, 216, 976, 320, 984, 392, 968, 480, 944, 528, 888, 560, 792, 568, 696)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelBoundary" index="2"]
+polygon = PackedVector2Array(-24, 904, 8, 872, 80, 832, 144, 840, 208, 800, 264, 784, 304, 768, 320, 736, 296, 728, 256, 736, 200, 776, 136, 816, 56, 800, 32, 776, 8, 712, -8, 616, -8, 528, 16, 424, 64, 384, 144, 360, 200, 328, 216, 296, 216, 248, 200, 208, -64, 208, -56, 912)
+
+[node name="Sheep3" parent="Sheeps" index="0"]
+position = Vector2(456, 848)
