@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ikpwbuscwrh" path="res://art/h1plot.png" id="1_l213i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ma74"]
-size = Vector2(80, 4.5)
+size = Vector2(112, 4.5)
 
 [node name="plot_front" type="StaticBody2D"]
 
@@ -19,6 +19,10 @@ texture = ExtResource("1_l213i")
 position = Vector2(90, 40)
 texture = ExtResource("1_l213i")
 
+[node name="H1Plot4" type="Sprite2D" parent="."]
+position = Vector2(115, 40)
+texture = ExtResource("1_l213i")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(64, 44)
+position = Vector2(78, 44)
 shape = SubResource("RectangleShape2D_4ma74")

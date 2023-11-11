@@ -1,16 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://c1spiqpafed37"]
+[gd_scene load_steps=11 format=3 uid="uid://c1spiqpafed37"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_a86jg"]
 [ext_resource type="Script" path="res://scripts/SheepPen.gd" id="2_ld6np"]
 [ext_resource type="PackedScene" uid="uid://blchuywajdsdc" path="res://assets/dog.tscn" id="3_o0r1p"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="4_njgos"]
-[ext_resource type="PackedScene" path="res://assets/plot_back.tscn" id="6_q23lf"]
-[ext_resource type="Texture2D" uid="uid://buo1caq45ktrl" path="res://art/trava1.png" id="6_xonnp"]
-[ext_resource type="PackedScene" path="res://assets/plot_side.tscn" id="7_dh5fn"]
+[ext_resource type="PackedScene" uid="uid://cui6mfu152oaf" path="res://assets/plot_back.tscn" id="6_q23lf"]
+[ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="6_xonnp"]
+[ext_resource type="PackedScene" uid="uid://ce1kranhyatpi" path="res://assets/plot_side.tscn" id="7_dh5fn"]
 [ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="7_m4ckq"]
-[ext_resource type="Texture2D" uid="uid://hemnm88x7m4y" path="res://art/rock.png" id="8_7c31o"]
-[ext_resource type="Texture2D" uid="uid://yavu4ji0uubp" path="res://art/Strom.png" id="9_2q6kh"]
-[ext_resource type="PackedScene" path="res://assets/plot_front.tscn" id="9_rf1po"]
+[ext_resource type="PackedScene" uid="uid://dks6bgrce6eak" path="res://assets/plot_front.tscn" id="9_rf1po"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mguhg"]
 size = Vector2(544, 216)
@@ -65,34 +63,17 @@ position = Vector2(-207, -32)
 position = Vector2(315, -32)
 
 [node name="plot_front_left" parent="SheepPen" instance=ExtResource("9_rf1po")]
-position = Vector2(-238, 32)
+position = Vector2(-304, 32)
 scale = Vector2(2.6, 2.6)
 
 [node name="plot_front_right" parent="SheepPen" instance=ExtResource("9_rf1po")]
-position = Vector2(89, 32)
+position = Vector2(88, 32)
 scale = Vector2(2.6, 2.6)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_m4ckq")
 volume_db = -2.812
 autoplay = true
-
-[node name="Images" type="Node" parent="."]
-
-[node name="3x" type="Node2D" parent="Images"]
-scale = Vector2(3, 3)
-
-[node name="Rock" type="Sprite2D" parent="Images/3x"]
-position = Vector2(-65.3333, 164)
-texture = ExtResource("8_7c31o")
-
-[node name="Strom" type="Sprite2D" parent="Images/3x"]
-position = Vector2(-57.3333, 124)
-texture = ExtResource("9_2q6kh")
-
-[node name="Trava2" type="Sprite2D" parent="Images/3x"]
-position = Vector2(-69.3333, 196)
-texture = ExtResource("6_xonnp")
 
 [node name="Sheeps" type="Node" parent="."]
 
