@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://blchuywajdsdc"]
+[gd_scene load_steps=8 format=3 uid="uid://blchuywajdsdc"]
 
 [ext_resource type="Texture2D" uid="uid://bf4ap7r0bf43d" path="res://art/doggy/doggy.png" id="1_qpfv8"]
+[ext_resource type="Script" path="res://dog.gd" id="1_ywslb"]
+[ext_resource type="Script" path="res://Pusher.gd" id="3_yfag8"]
+[ext_resource type="Script" path="res://SheepCollider.gd" id="4_yp6na"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7g4ms"]
 animations = [{
@@ -13,32 +16,37 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2b3ph"]
-radius = 12.5
-height = 32.0
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_x0d8a"]
-radius = 32.5576
+radius = 16.6208
 
-[node name="Area2D" type="Area2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_r2kcd"]
+radius = 83.3847
+
+[node name="Dog" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_ywslb")
 metadata/_edit_group_ = true
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_7g4ms")
 
-[node name="BaseCollision" type="AnimatableBody2D" parent="."]
-visible = false
-scale = Vector2(2, 2)
+[node name="Pusher" type="Node2D" parent="."]
+script = ExtResource("3_yfag8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseCollision"]
+[node name="DogCollider" type="CollisionShape2D" parent="."]
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_2b3ph")
-
-[node name="SheepCollision" type="AnimatableBody2D" parent="."]
 scale = Vector2(2, 2)
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SheepCollision"]
-rotation = 1.5708
 shape = SubResource("CircleShape2D_x0d8a")
+
+[node name="SheepCollider" type="AnimatableBody2D" parent="."]
+script = ExtResource("4_yp6na")
+
+[node name="Collider" type="CollisionShape2D" parent="SheepCollider"]
+shape = SubResource("CircleShape2D_r2kcd")
+debug_color = Color(0.701961, 0.454902, 0.494118, 0.419608)
+
+[node name="Polygon2D" type="Polygon2D" parent="SheepCollider"]
+color = Color(1, 1, 1, 0.196078)
+polygon = PackedVector2Array(-67, 26, -27, 68, 30, 70, 71, 23, 66, -20, 25, -66, -19, -66, -61, -42)
