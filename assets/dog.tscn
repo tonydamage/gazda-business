@@ -78,17 +78,17 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x0d8a"]
-radius = 16.6208
+radius = 48.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r2kcd"]
-radius = 83.3847
+radius = 128.25
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3d0m8"]
 radius = 56.5685
 
 [node name="Dog" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 7
+collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_nj7g0")
 metadata/_edit_group_ = true
@@ -101,15 +101,14 @@ autoplay = "idle"
 
 [node name="DogCollider" type="CollisionShape2D" parent="."]
 rotation = 1.5708
-scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_x0d8a")
 
 [node name="SheepCollider" type="CharacterBody2D" parent="."]
 collision_layer = 4
 collision_mask = 0
+motion_mode = 1
 
 [node name="Collider" type="CollisionShape2D" parent="SheepCollider"]
-scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_r2kcd")
 debug_color = Color(0.701961, 0.454902, 0.494118, 0.419608)
 
