@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1spiqpafed37"]
+[gd_scene load_steps=10 format=3 uid="uid://c1spiqpafed37"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_a86jg"]
 [ext_resource type="Script" path="res://scripts/SheepPen.gd" id="2_ld6np"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cui6mfu152oaf" path="res://assets/plot_back.tscn" id="6_q23lf"]
 [ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="6_xonnp"]
 [ext_resource type="PackedScene" uid="uid://ce1kranhyatpi" path="res://assets/plot_side.tscn" id="7_dh5fn"]
-[ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="7_m4ckq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mguhg"]
 size = Vector2(544, 192)
@@ -25,7 +24,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
 color = Color(0.415686, 0.745098, 0.188235, 1)
 
 [node name="Trava1" type="Sprite2D" parent="."]
@@ -79,13 +77,10 @@ shape = SubResource("SegmentShape2D_ur5as")
 position = Vector2(690, 447)
 rotation = 1.82561
 scale = Vector2(2.5, 2.5)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_m4ckq")
-volume_db = -2.812
-autoplay = true
+skew = 0.867429
+shape = SubResource("SegmentShape2D_ur5as")
 
 [node name="plot_side" parent="." instance=ExtResource("7_dh5fn")]
-position = Vector2(-32, 40)
+position = Vector2(-32, 32)
 
 [connection signal="allSheepInArea" from="SheepPen" to="." method="_on_sheep_pen_all_sheep_in_area"]
