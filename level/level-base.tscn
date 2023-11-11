@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1spiqpafed37"]
+[gd_scene load_steps=7 format=3 uid="uid://c1spiqpafed37"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_a86jg"]
 [ext_resource type="Script" path="res://scripts/SheepPen.gd" id="2_ld6np"]
 [ext_resource type="PackedScene" uid="uid://blchuywajdsdc" path="res://assets/dog.tscn" id="3_o0r1p"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="4_njgos"]
+[ext_resource type="PackedScene" uid="uid://bqyi1vo8r7kjd" path="res://assets/plot.tscn" id="5_ogcos"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mguhg"]
-size = Vector2(202, 138)
+size = Vector2(544, 192)
 
 [node name="BaseLevel" type="Node"]
 script = ExtResource("1_a86jg")
@@ -31,12 +32,14 @@ script = ExtResource("2_ld6np")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SheepPen"]
-position = Vector2(91, 59)
+position = Vector2(96, 32)
 shape = SubResource("RectangleShape2D_mguhg")
 
 [node name="Polygon2D" type="Polygon2D" parent="SheepPen"]
+position = Vector2(-160, -48)
+scale = Vector2(2, 2)
 color = Color(0.34902, 0.2, 0, 1)
-polygon = PackedVector2Array(-8, -8, 192, -8, 192, 128, -8, 128)
+polygon = PackedVector2Array(-8, -8, 264, -8, 264, 88, -8, 88)
 
 [node name="Dog" parent="." instance=ExtResource("3_o0r1p")]
 position = Vector2(264, 832)
@@ -44,5 +47,8 @@ collision_mask = 3
 
 [node name="Sheep3" parent="." instance=ExtResource("4_njgos")]
 position = Vector2(376, 688)
+
+[node name="Plot" parent="." instance=ExtResource("5_ogcos")]
+position = Vector2(0, 168)
 
 [connection signal="allSheepInArea" from="SheepPen" to="." method="_on_sheep_pen_all_sheep_in_area"]
