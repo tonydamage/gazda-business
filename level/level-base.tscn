@@ -4,11 +4,11 @@
 [ext_resource type="Script" path="res://scripts/SheepPen.gd" id="2_ld6np"]
 [ext_resource type="PackedScene" uid="uid://blchuywajdsdc" path="res://assets/dog.tscn" id="3_o0r1p"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="4_njgos"]
-[ext_resource type="PackedScene" uid="uid://cui6mfu152oaf" path="res://assets/plot_back.tscn" id="6_q23lf"]
-[ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="6_xonnp"]
-[ext_resource type="PackedScene" uid="uid://ce1kranhyatpi" path="res://assets/plot_side.tscn" id="7_dh5fn"]
+[ext_resource type="PackedScene" path="res://assets/plot_back.tscn" id="6_q23lf"]
+[ext_resource type="Texture2D" uid="uid://buo1caq45ktrl" path="res://art/trava1.png" id="6_xonnp"]
+[ext_resource type="PackedScene" path="res://assets/plot_side.tscn" id="7_dh5fn"]
 [ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="7_m4ckq"]
-[ext_resource type="PackedScene" uid="uid://dks6bgrce6eak" path="res://assets/plot_front.tscn" id="9_rf1po"]
+[ext_resource type="PackedScene" path="res://assets/plot_front.tscn" id="9_rf1po"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mguhg"]
 size = Vector2(544, 216)
@@ -35,10 +35,11 @@ texture = ExtResource("6_xonnp")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelBoundary"]
 polygon = PackedVector2Array(0, 64, 8, 32, 16, 16, 32, 8, 64, 0, 472, 0, 504, 8, 520, 16, 528, 32, 536, 64, 536, 896, 528, 928, 520, 944, 504, 952, 472, 960, 56, 960, 32, 952, 16, 944, 8, 928, 0, 896, 0, 64, -72, 64, -64, 1016, 600, 1016, 608, -104, -72, -104, -72, 64)
 
-[node name="SheepPen" type="Area2D" parent="."]
+[node name="SheepPen" type="Area2D" parent="." node_paths=PackedStringArray("sheepCollection")]
 position = Vector2(176, 64)
 collision_mask = 4
 script = ExtResource("2_ld6np")
+sheepCollection = NodePath("../Sheeps")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SheepPen"]
@@ -68,15 +69,19 @@ scale = Vector2(2.6, 2.6)
 position = Vector2(89, 32)
 scale = Vector2(2.6, 2.6)
 
-[node name="Dog" parent="." instance=ExtResource("3_o0r1p")]
-position = Vector2(264, 832)
-
-[node name="Sheep3" parent="." instance=ExtResource("4_njgos")]
-position = Vector2(347, 654)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_m4ckq")
 volume_db = -2.812
 autoplay = true
+
+[node name="Images" type="Node" parent="."]
+
+[node name="Sheeps" type="Node" parent="."]
+
+[node name="Sheep3" parent="Sheeps" instance=ExtResource("4_njgos")]
+position = Vector2(347, 654)
+
+[node name="Dog" parent="." instance=ExtResource("3_o0r1p")]
+position = Vector2(264, 832)
 
 [connection signal="allSheepInArea" from="SheepPen" to="." method="_on_sheep_pen_all_sheep_in_area"]
