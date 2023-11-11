@@ -1,0 +1,76 @@
+[gd_scene load_steps=14 format=3 uid="uid://xvk36x75tqq"]
+
+[ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="1_q3wwd"]
+[ext_resource type="Script" path="res://StartButton.gd" id="1_wvhom"]
+[ext_resource type="AudioStream" uid="uid://4fn74y2i4nk6" path="res://art/Audio/Footsteps_Casual_Grass_01.wav" id="2_urga0"]
+[ext_resource type="Script" path="res://ExitButton.gd" id="3_elw05"]
+[ext_resource type="AudioStream" uid="uid://cvi2nr6wlfaa1" path="res://art/Audio/panting-1.mp3" id="3_mg3yl"]
+[ext_resource type="AudioStream" uid="uid://bmevf5p2g4osp" path="res://art/Audio/Footsteps_Casual_Grass_02.wav" id="3_mxnol"]
+[ext_resource type="AudioStream" uid="uid://dpkfgxc1t0hkp" path="res://art/Audio/panting-2.mp3" id="4_3mm6d"]
+[ext_resource type="AudioStream" uid="uid://b76ffyl0b2og5" path="res://art/Audio/Footsteps_Casual_Grass_03.wav" id="4_j6hkj"]
+[ext_resource type="AudioStream" uid="uid://bk33jobfkudbb" path="res://art/Audio/Footsteps_Casual_Grass_04.wav" id="5_1q7vf"]
+[ext_resource type="AudioStream" uid="uid://b8o7lstsj0xtd" path="res://art/Audio/panting-3.mp3" id="5_cac4d"]
+[ext_resource type="AudioStream" uid="uid://cgxofxxgqa7mr" path="res://art/Audio/Footsteps_Casual_Grass_05.wav" id="6_vp50v"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_uyxrk"]
+streams_count = 5
+random_pitch = 1.14
+random_volume_offset_db = 1.64
+stream_0/stream = ExtResource("2_urga0")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("3_mxnol")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("4_j6hkj")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("5_1q7vf")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("6_vp50v")
+stream_4/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ct8y1"]
+streams_count = 3
+random_pitch = 1.14
+stream_0/stream = ExtResource("3_mg3yl")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("4_3mm6d")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("5_cac4d")
+stream_2/weight = 1.0
+
+[node name="MenuRoot" type="Node2D"]
+
+[node name="StartButton" type="Button" parent="." node_paths=PackedStringArray("SoundEffect")]
+offset_left = 148.0
+offset_top = 164.0
+offset_right = 342.0
+offset_bottom = 235.0
+action_mode = 0
+text = "START"
+script = ExtResource("1_wvhom")
+SoundEffect = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StartButton"]
+stream = SubResource("AudioStreamRandomizer_uyxrk")
+pitch_scale = 0.89
+max_polyphony = 2
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 146.0
+offset_top = 292.0
+offset_right = 351.0
+offset_bottom = 359.0
+text = "EXIT"
+script = ExtResource("3_elw05")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ExitButton"]
+stream = SubResource("AudioStreamRandomizer_ct8y1")
+volume_db = -6.933
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(252, 86)
+stream = ExtResource("1_q3wwd")
+autoplay = true
+
+[connection signal="button_up" from="StartButton" to="StartButton" method="_on_button_up"]
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
+[connection signal="finished" from="StartButton/AudioStreamPlayer" to="StartButton" method="_on_audio_stream_player_finished"]
