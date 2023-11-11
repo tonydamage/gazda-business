@@ -1,6 +1,7 @@
 extends Area2D
+class_name Dragable
 
-var draggable = false
+#var draggable = false
 var offset: Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,8 +22,9 @@ func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseMotion:
 		if event.button_mask == MOUSE_BUTTON_MASK_LEFT:
 			#get_parent().velocity = event.velocity
-			get_parent().velocity = (event.position - get_parent().global_position) / get_physics_process_delta_time()
-			print_debug(event.global_position, get_parent().velocity)
+			get_parent().draggable = true
+			get_parent().velocity = (event.position - get_parent().global_position) / get_process_delta_time()
 			get_parent().move_and_slide()
 		else:
-			print_debug("Drag stop")
+			get_parent().velocity = Vector2.ZERO
+			get_parent().draggable = false
