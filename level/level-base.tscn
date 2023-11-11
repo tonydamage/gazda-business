@@ -11,6 +11,14 @@ size = Vector2(202, 138)
 [node name="BaseLevel" type="Node"]
 script = ExtResource("1_a86jg")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.415686, 0.745098, 0.188235, 1)
+
 [node name="LevelBoundary" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelBoundary"]
