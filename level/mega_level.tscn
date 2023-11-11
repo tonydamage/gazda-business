@@ -1,0 +1,203 @@
+[gd_scene load_steps=6 format=3 uid="uid://fpuxy0mw44tk"]
+
+[ext_resource type="PackedScene" uid="uid://c1spiqpafed37" path="res://level/level-base.tscn" id="1_td58a"]
+[ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="2_4i0au"]
+[ext_resource type="Texture2D" uid="uid://yavu4ji0uubp" path="res://art/Strom.png" id="3_i0hxy"]
+[ext_resource type="Texture2D" uid="uid://hemnm88x7m4y" path="res://art/rock.png" id="3_k54j4"]
+[ext_resource type="Texture2D" uid="uid://bnnsivql37l4" path="res://art/darktrava.png" id="5_seo15"]
+
+[node name="BaseLevel" instance=ExtResource("1_td58a")]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBoundary" index="1"]
+polygon = PackedVector2Array(-8, 816, 24, 760, 72, 704, 144, 656, 216, 616, 264, 600, 304, 568, 304, 536, 280, 504, 208, 464, 136, 432, 80, 384, 40, 296, 8, 208, -40, 216, -48, 824)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelBoundary" index="2"]
+polygon = PackedVector2Array(256, 192, 288, 272, 352, 328, 416, 368, 456, 408, 496, 448, 520, 496, 544, 576, 552, 656, 592, 816, 688, 816, 768, 192)
+
+[node name="plot_front_left" parent="SheepPen" index="5"]
+position = Vector2(-433, 32)
+
+[node name="Level" type="Node" parent="Images" index="0"]
+
+[node name="Strom" type="Sprite2D" parent="Images/Level" index="0"]
+position = Vector2(98, 440)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Strom2" type="Sprite2D" parent="Images/Level" index="1"]
+position = Vector2(140, 472)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Rock3" type="Sprite2D" parent="Images/Level" index="2"]
+position = Vector2(280, 216)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock11" type="Sprite2D" parent="Images/Level" index="3"]
+position = Vector2(309, 272)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock12" type="Sprite2D" parent="Images/Level" index="4"]
+position = Vector2(352, 304)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock13" type="Sprite2D" parent="Images/Level" index="5"]
+position = Vector2(400, 344)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock14" type="Sprite2D" parent="Images/Level" index="6"]
+position = Vector2(448, 376)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock15" type="Sprite2D" parent="Images/Level" index="7"]
+position = Vector2(488, 424)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock16" type="Sprite2D" parent="Images/Level" index="8"]
+position = Vector2(520, 460)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock17" type="Sprite2D" parent="Images/Level" index="9"]
+position = Vector2(541, 508)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock18" type="Sprite2D" parent="Images/Level" index="10"]
+position = Vector2(131, 648)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock19" type="Sprite2D" parent="Images/Level" index="11"]
+position = Vector2(168, 624)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock20" type="Sprite2D" parent="Images/Level" index="12"]
+position = Vector2(213, 608)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock21" type="Sprite2D" parent="Images/Level" index="13"]
+position = Vector2(248, 592)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock22" type="Sprite2D" parent="Images/Level" index="14"]
+position = Vector2(72, 400)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock23" type="Sprite2D" parent="Images/Level" index="15"]
+position = Vector2(56, 368)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock24" type="Sprite2D" parent="Images/Level" index="16"]
+position = Vector2(40, 336)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock25" type="Sprite2D" parent="Images/Level" index="17"]
+position = Vector2(48, 384)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock26" type="Sprite2D" parent="Images/Level" index="18"]
+position = Vector2(24, 296)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock27" type="Sprite2D" parent="Images/Level" index="19"]
+position = Vector2(8, 256)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock4" type="Sprite2D" parent="Images/Level" index="20"]
+position = Vector2(8, 752)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock5" type="Sprite2D" parent="Images/Level" index="21"]
+position = Vector2(56, 712)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock6" type="Sprite2D" parent="Images/Level" index="22"]
+position = Vector2(96, 672)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock7" type="Sprite2D" parent="Images/Level" index="23"]
+position = Vector2(280, 576)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock8" type="Sprite2D" parent="Images/Level" index="24"]
+position = Vector2(296, 536)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock9" type="Sprite2D" parent="Images/Level" index="25"]
+position = Vector2(256, 508)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Rock10" type="Sprite2D" parent="Images/Level" index="26"]
+position = Vector2(216, 484)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k54j4")
+
+[node name="Strom3" type="Sprite2D" parent="Images/Level" index="27"]
+position = Vector2(184, 496)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Strom5" type="Sprite2D" parent="Images/Level" index="28"]
+position = Vector2(392, 296)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Strom8" type="Sprite2D" parent="Images/Level" index="29"]
+position = Vector2(328, 220)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Strom6" type="Sprite2D" parent="Images/Level" index="30"]
+position = Vector2(512, 368)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Strom7" type="Sprite2D" parent="Images/Level" index="31"]
+position = Vector2(540, 408)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Darktrava" type="Sprite2D" parent="Images/Level" index="32"]
+position = Vector2(240, 376)
+scale = Vector2(3, 3)
+texture = ExtResource("5_seo15")
+
+[node name="Sheep" parent="Sheeps" index="1" instance=ExtResource("2_4i0au")]
+position = Vector2(264, 680)
+
+[node name="Sheep2" parent="Sheeps" index="2" instance=ExtResource("2_4i0au")]
+position = Vector2(184, 704)
+
+[node name="Sheep4" parent="Sheeps" index="3" instance=ExtResource("2_4i0au")]
+position = Vector2(112, 768)
+
+[node name="Sheep5" parent="Sheeps" index="4" instance=ExtResource("2_4i0au")]
+position = Vector2(448, 792)
+
+[node name="Sheep6" parent="Sheeps" index="5" instance=ExtResource("2_4i0au")]
+position = Vector2(448, 712)
+
+[node name="Dog" parent="." index="7"]
+position = Vector2(261, 888)
