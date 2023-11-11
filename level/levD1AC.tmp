@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1spiqpafed37"]
+[gd_scene load_steps=9 format=3 uid="uid://c1spiqpafed37"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_a86jg"]
 [ext_resource type="Script" path="res://scripts/SheepPen.gd" id="2_ld6np"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="4_njgos"]
 [ext_resource type="PackedScene" uid="uid://bqyi1vo8r7kjd" path="res://assets/plot.tscn" id="5_ogcos"]
 [ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="6_xonnp"]
-[ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="7_m4ckq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mguhg"]
 size = Vector2(544, 192)
@@ -55,6 +54,7 @@ polygon = PackedVector2Array(-8, -8, 264, -8, 264, 88, -8, 88)
 [node name="Dog" parent="." instance=ExtResource("3_o0r1p")]
 position = Vector2(264, 832)
 collision_mask = 3
+speed = 400
 
 [node name="Sheep3" parent="." instance=ExtResource("4_njgos")]
 position = Vector2(376, 688)
@@ -75,10 +75,5 @@ rotation = -0.410152
 scale = Vector2(2.5, 2.5)
 skew = 0.867429
 shape = SubResource("SegmentShape2D_ur5as")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_m4ckq")
-volume_db = -2.812
-autoplay = true
 
 [connection signal="allSheepInArea" from="SheepPen" to="." method="_on_sheep_pen_all_sheep_in_area"]

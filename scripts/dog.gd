@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var WalkSound : AudioStreamPlayer = null;
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 
@@ -32,3 +33,8 @@ func _process(_delta):
 		$AnimatedSprite2D.animation = "idle"
 		
 	move_and_slide()
+	
+	if velocity.length() > 0 && !WalkSound.playing:
+		WalkSound.play()
+	if velocity.length() == 0 && WalkSound.playing:
+		WalkSound.stop()
