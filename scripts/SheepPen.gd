@@ -1,13 +1,13 @@
 extends Area2D
 
 var requiredSheep = 0
-
+@export var sheepCollection : Node
 signal allSheepInArea
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 		
-	for c in get_parent().get_children():
+	for c in sheepCollection.get_children():
 		if c is Sheep:
 			requiredSheep += 1
 
