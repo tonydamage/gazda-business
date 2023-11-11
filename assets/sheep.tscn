@@ -28,10 +28,11 @@ metadata/_edit_group_ = true
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(2, 2)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_yxvdi")
 
 [node name="BaseCollision" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_yetbv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
