@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bl7avmfgm12e2"]
+[gd_scene load_steps=6 format=3 uid="uid://bl7avmfgm12e2"]
 
 [ext_resource type="Script" path="res://scripts/sheep.gd" id="1_felj8"]
 [ext_resource type="Texture2D" uid="uid://bcuxpo3pac8vr" path="res://art/sheep/ovca.png" id="1_if70k"]
+[ext_resource type="AudioStream" uid="uid://c0v2ycvbv1v5v" path="res://art/Audio/whine-3.mp3" id="3_kguyb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yxvdi"]
 animations = [{
@@ -17,13 +18,14 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_yetbv"]
 radius = 18.2483
 
-[node name="Sheep" type="RigidBody2D"]
+[node name="Sheep" type="RigidBody2D" node_paths=PackedStringArray("AppearEffect")]
 collision_layer = 4
 collision_mask = 5
 gravity_scale = 0.0
 lock_rotation = true
 linear_damp = 5.0
 script = ExtResource("1_felj8")
+AppearEffect = NodePath("AudioStreamPlayer")
 metadata/_edit_group_ = true
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
@@ -35,4 +37,10 @@ sprite_frames = SubResource("SpriteFrames_yxvdi")
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_yetbv")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kguyb")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
