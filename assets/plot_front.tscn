@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dks6bgrce6eak"]
+
+[ext_resource type="Texture2D" uid="uid://ikpwbuscwrh" path="res://art/h1plot.png" id="1_l213i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ma74"]
+size = Vector2(80, 4.5)
+
+[node name="plot_front" type="StaticBody2D"]
+
+[node name="H1Plot" type="Sprite2D" parent="."]
+position = Vector2(40, 40)
+texture = ExtResource("1_l213i")
+
+[node name="H1Plot2" type="Sprite2D" parent="."]
+position = Vector2(65, 40)
+texture = ExtResource("1_l213i")
+
+[node name="H1Plot3" type="Sprite2D" parent="."]
+position = Vector2(90, 40)
+texture = ExtResource("1_l213i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64, 44)
+shape = SubResource("RectangleShape2D_4ma74")

@@ -1,10 +1,15 @@
-[gd_scene load_steps=20 format=3 uid="uid://blchuywajdsdc"]
+[gd_scene load_steps=26 format=3 uid="uid://blchuywajdsdc"]
 
 [ext_resource type="Script" path="res://scripts/dog.gd" id="1_nj7g0"]
 [ext_resource type="Texture2D" uid="uid://crjxbk4upcq5p" path="res://art/dogoanimationidle-Sheet.png" id="3_75qpg"]
-[ext_resource type="Texture2D" uid="uid://1rcuag2bp2l7" path="res://art/doggy/nanarunsheet.png" id="3_cwqsr"]
 [ext_resource type="Script" path="res://assets/Dragable.gd" id="3_pie8h"]
+[ext_resource type="Texture2D" uid="uid://cklye22secvly" path="res://art/doggy/nana.png" id="3_quv67"]
 [ext_resource type="AudioStream" uid="uid://bf6m2nj76bg4c" path="res://art/Audio/running-in-grass-6237.mp3" id="5_ncg5v"]
+[ext_resource type="AudioStream" uid="uid://bbakbifw6nnrf" path="res://art/Audio/bark-1.mp3" id="6_p01j3"]
+[ext_resource type="AudioStream" uid="uid://bkx3m21bdlydm" path="res://art/Audio/bark-2.mp3" id="7_gl5ul"]
+[ext_resource type="AudioStream" uid="uid://bmvd5ko50xrj" path="res://art/Audio/bark-3.mp3" id="8_3w7yf"]
+[ext_resource type="AudioStream" uid="uid://ciy6cjwhv2v38" path="res://art/Audio/bark-4.mp3" id="9_sy3vf"]
+[ext_resource type="Script" path="res://assets/BarkingEffect.gd" id="10_bnw0m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yu4if"]
 atlas = ExtResource("3_75qpg")
@@ -34,13 +39,9 @@ region = Rect2(160, 0, 32, 32)
 atlas = ExtResource("3_75qpg")
 region = Rect2(192, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hwymx"]
-atlas = ExtResource("3_cwqsr")
-region = Rect2(0, 0, 40, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ss3mw"]
-atlas = ExtResource("3_cwqsr")
-region = Rect2(40, 0, 40, 40)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rn6vw"]
+atlas = ExtResource("3_75qpg")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pgn6h"]
 animations = [{
@@ -72,21 +73,24 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hwymx")
+"texture": SubResource("AtlasTexture_rn6vw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ss3mw")
+"texture": ExtResource("3_quv67")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 2.0
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x0d8a"]
-radius = 16.6208
+radius = 48.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r2kcd"]
-radius = 83.3847
+radius = 128.25
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0drra"]
+radius = 137.004
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3d0m8"]
 radius = 56.5685
@@ -96,9 +100,20 @@ streams_count = 1
 stream_0/stream = ExtResource("5_ncg5v")
 stream_0/weight = 1.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7pjpm"]
+streams_count = 4
+stream_0/stream = ExtResource("6_p01j3")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("7_gl5ul")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("8_3w7yf")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("9_sy3vf")
+stream_3/weight = 1.0
+
 [node name="Dog" type="CharacterBody2D" node_paths=PackedStringArray("WalkSound")]
 collision_layer = 2
-collision_mask = 7
+collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_nj7g0")
 WalkSound = NodePath("LiveDogWalking")
@@ -109,21 +124,28 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_pgn6h")
 animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.127215
 
 [node name="DogCollider" type="CollisionShape2D" parent="."]
+visible = false
 rotation = 1.5708
-scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_x0d8a")
 
 [node name="SheepCollider" type="CharacterBody2D" parent="."]
 collision_layer = 4
 collision_mask = 0
+motion_mode = 1
 
 [node name="Collider" type="CollisionShape2D" parent="SheepCollider"]
-scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_r2kcd")
 debug_color = Color(0.701961, 0.454902, 0.494118, 0.419608)
+
+[node name="BarkingArea" type="Area2D" parent="SheepCollider"]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SheepCollider/BarkingArea"]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_0drra")
 
 [node name="Dragable" type="Area2D" parent="."]
 collision_layer = 8388608
@@ -138,4 +160,10 @@ shape = SubResource("CircleShape2D_3d0m8")
 stream = SubResource("AudioStreamRandomizer_q2qm0")
 volume_db = -36.541
 
+[node name="BarkingEffect" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_7pjpm")
+script = ExtResource("10_bnw0m")
+
+[connection signal="area_entered" from="SheepCollider/BarkingArea" to="BarkingEffect" method="_on_barking_area_area_entered"]
+[connection signal="body_entered" from="SheepCollider/BarkingArea" to="BarkingEffect" method="_on_barking_area_body_entered"]
 [connection signal="input_event" from="Dragable" to="Dragable" method="_on_input_event"]
