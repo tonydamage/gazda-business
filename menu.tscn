@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://xvk36x75tqq"]
+[gd_scene load_steps=18 format=3 uid="uid://dknxuxjtx6yk5"]
 
 [ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="1_q3wwd"]
 [ext_resource type="Script" path="res://StartButton.gd" id="1_wvhom"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cvi2nr6wlfaa1" path="res://art/Audio/panting-1.mp3" id="3_mg3yl"]
 [ext_resource type="AudioStream" uid="uid://dpkfgxc1t0hkp" path="res://art/Audio/panting-2.mp3" id="4_3mm6d"]
 [ext_resource type="AudioStream" uid="uid://b8o7lstsj0xtd" path="res://art/Audio/panting-3.mp3" id="5_cac4d"]
+[ext_resource type="Texture2D" uid="uid://bq6wkjly4n4rj" path="res://art/Gazda-Sheet.png" id="8_lp6tf"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ct8y1"]
 streams_count = 3
@@ -18,6 +19,63 @@ stream_1/weight = 1.0
 stream_2/stream = ExtResource("5_cac4d")
 stream_2/weight = 1.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjpaf"]
+atlas = ExtResource("8_lp6tf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3e24"]
+atlas = ExtResource("8_lp6tf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p135h"]
+atlas = ExtResource("8_lp6tf")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stf6r"]
+atlas = ExtResource("8_lp6tf")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf4gh"]
+atlas = ExtResource("8_lp6tf")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7d553"]
+atlas = ExtResource("8_lp6tf")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbfoq"]
+atlas = ExtResource("8_lp6tf")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_162rp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjpaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3e24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p135h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stf6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf4gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7d553")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbfoq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="MenuRoot" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -26,12 +84,13 @@ offset_bottom = 960.0
 color = Color(0.415686, 0.745098, 0.188235, 1)
 
 [node name="StartButton" type="Button" parent="." node_paths=PackedStringArray("SoundEffect")]
-offset_left = 160.0
-offset_top = 360.0
-offset_right = 360.0
-offset_bottom = 430.0
+offset_left = 120.0
+offset_top = 328.0
+offset_right = 420.0
+offset_bottom = 448.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/font_size = 70
 action_mode = 0
 text = "START"
 script = ExtResource("1_wvhom")
@@ -43,10 +102,11 @@ pitch_scale = 0.89
 max_polyphony = 2
 
 [node name="ExitButton" type="Button" parent="."]
-offset_left = 160.0
-offset_top = 480.0
-offset_right = 360.0
-offset_bottom = 550.0
+offset_left = 168.0
+offset_top = 744.0
+offset_right = 368.0
+offset_bottom = 821.0
+theme_override_font_sizes/font_size = 50
 text = "EXIT"
 script = ExtResource("3_elw05")
 
@@ -58,6 +118,13 @@ volume_db = -6.933
 position = Vector2(252, 86)
 stream = ExtResource("1_q3wwd")
 autoplay = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(268, 660)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_162rp")
+autoplay = "default"
+frame_progress = 0.805433
 
 [connection signal="button_up" from="StartButton" to="StartButton" method="_on_button_up"]
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
