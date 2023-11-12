@@ -1,13 +1,14 @@
-[gd_scene load_steps=18 format=3 uid="uid://c1spiqpafed37"]
+[gd_scene load_steps=19 format=3 uid="uid://c1spiqpafed37"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_a86jg"]
 [ext_resource type="Script" path="res://scripts/SheepPen.gd" id="2_ld6np"]
 [ext_resource type="PackedScene" uid="uid://blchuywajdsdc" path="res://assets/dog.tscn" id="3_o0r1p"]
-[ext_resource type="Texture2D" uid="uid://6gy5vl2riidv" path="res://art/darktrava.png" id="4_860c7"]
+[ext_resource type="Texture2D" uid="uid://bnnsivql37l4" path="res://art/darktrava.png" id="4_860c7"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="4_njgos"]
-[ext_resource type="PackedScene" uid="uid://cui6mfu152oaf" path="res://assets/plot_back.tscn" id="6_q23lf"]
+[ext_resource type="PackedScene" path="res://assets/plot_back.tscn" id="6_q23lf"]
+[ext_resource type="AudioStream" uid="uid://w4u1mn8n484g" path="res://art/Audio/epic-relaxing-flute-music-144009.mp3" id="6_sl5k3"]
 [ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="6_xonnp"]
-[ext_resource type="PackedScene" uid="uid://ce1kranhyatpi" path="res://assets/plot_side.tscn" id="7_dh5fn"]
+[ext_resource type="PackedScene" path="res://assets/plot_side.tscn" id="7_dh5fn"]
 [ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="7_m4ckq"]
 [ext_resource type="Texture2D" uid="uid://cmc2phbucucyo" path="res://art/rock.png" id="8_7c31o"]
 [ext_resource type="Texture2D" uid="uid://bh0ub8q4g2fdw" path="res://art/Strom.png" id="9_2q6kh"]
@@ -73,12 +74,21 @@ scale = Vector2(2.6, 2.6)
 position = Vector2(88, 32)
 scale = Vector2(2.6, 2.6)
 
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_sl5k3")
+volume_db = -14.994
+autoplay = true
+
 [node name="BackgroundSounds" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_m4ckq")
 volume_db = -2.812
 autoplay = true
 
 [node name="Sheeps" type="Node" parent="."]
+
+[node name="SheepSleeping" parent="Sheeps" node_paths=PackedStringArray("AppearEffect") instance=ExtResource("4_njgos")]
+position = Vector2(484, 59)
+AppearEffect = NodePath("../Sheep3/DogWhining")
 
 [node name="Sheep3" parent="Sheeps" instance=ExtResource("4_njgos")]
 position = Vector2(347, 654)
