@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://bl7avmfgm12e2"]
+[gd_scene load_steps=20 format=3 uid="uid://bl7avmfgm12e2"]
 
 [ext_resource type="Script" path="res://scripts/sheep.gd" id="1_felj8"]
 [ext_resource type="Texture2D" uid="uid://bcuxpo3pac8vr" path="res://art/sheep/ovca.png" id="1_if70k"]
 [ext_resource type="AudioStream" uid="uid://c0v2ycvbv1v5v" path="res://art/Audio/whine-3.mp3" id="3_kguyb"]
-[ext_resource type="Texture2D" uid="uid://diem7kwb24bpy" path="res://art/sheep/pasak-Sheet.png" id="3_m5p08"]
+[ext_resource type="Texture2D" uid="uid://b47plw16hxtbw" path="res://art/sheep/pasak-Sheet.png" id="3_m5p08"]
+[ext_resource type="Texture2D" uid="uid://dp0nlwtveqxhx" path="res://art/sleepsheep-Sheet.png" id="4_8sppj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3lplx"]
 atlas = ExtResource("3_m5p08")
@@ -45,6 +46,14 @@ region = Rect2(256, 0, 32, 32)
 atlas = ExtResource("3_m5p08")
 region = Rect2(288, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiaqh"]
+atlas = ExtResource("4_8sppj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iy046"]
+atlas = ExtResource("4_8sppj")
+region = Rect2(32, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_yxvdi"]
 animations = [{
 "frames": [{
@@ -84,6 +93,17 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiaqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iy046")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 2.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yetbv"]
@@ -103,8 +123,8 @@ metadata/_edit_group_ = true
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_yxvdi")
+animation = &"sleep"
 autoplay = "default"
-frame_progress = 0.0736616
 
 [node name="BaseCollision" type="CollisionShape2D" parent="."]
 scale = Vector2(2, 2)
