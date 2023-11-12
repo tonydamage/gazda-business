@@ -14,7 +14,7 @@
 visible = true
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBoundary" index="1"]
-polygon = PackedVector2Array(-8, 816, 24, 760, 72, 704, 144, 656, 216, 616, 264, 600, 304, 568, 304, 536, 280, 504, 208, 464, 136, 432, 80, 384, 40, 296, 24, 264, 32, 232, 88, 200, -40, 200, -48, 824)
+polygon = PackedVector2Array(-8, 816, 24, 760, 72, 704, 144, 656, 216, 616, 264, 600, 304, 568, 304, 536, 280, 504, 208, 464, 136, 432, 80, 384, 56, 328, 40, 280, 48, 248, 88, 216, 88, 192, -40, 168, -48, 824)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelBoundary" index="2"]
 polygon = PackedVector2Array(256, 192, 288, 272, 352, 328, 416, 368, 456, 408, 496, 448, 520, 496, 544, 576, 552, 656, 592, 816, 688, 816, 768, 192)
@@ -160,31 +160,151 @@ scale = Vector2(3, 3)
 texture = ExtResource("3_k54j4")
 
 [node name="Images@Level@Strom3" type="Sprite2D" parent="CanvasGroup" index="27"]
-position = Vector2(184, 496)
+position = Vector2(186, 508)
+scale = Vector2(3.16667, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom3" type="Sprite2D" parent="CanvasGroup" index="28"]
+position = Vector2(216, 544)
 scale = Vector2(3, 3)
 texture = ExtResource("3_i0hxy")
 
-[node name="Images@Level@Strom5" type="Sprite2D" parent="CanvasGroup" index="28"]
-position = Vector2(392, 296)
+[node name="Images_Level_Strom7" type="Sprite2D" parent="CanvasGroup" index="29"]
+position = Vector2(-16, 296)
 scale = Vector2(3, 3)
 texture = ExtResource("3_i0hxy")
 
-[node name="Images@Level@Strom8" type="Sprite2D" parent="CanvasGroup" index="29"]
-position = Vector2(328, 220)
+[node name="Images_Level_Strom12" type="Sprite2D" parent="CanvasGroup" index="30"]
+position = Vector2(0, 352)
 scale = Vector2(3, 3)
 texture = ExtResource("3_i0hxy")
 
-[node name="Images@Level@Strom6" type="Sprite2D" parent="CanvasGroup" index="30"]
+[node name="Images_Level_Strom13" type="Sprite2D" parent="CanvasGroup" index="31"]
+position = Vector2(24, 404)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom14" type="Sprite2D" parent="CanvasGroup" index="32"]
+position = Vector2(48, 464)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom15" type="Sprite2D" parent="CanvasGroup" index="33"]
+position = Vector2(80, 500)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom16" type="Sprite2D" parent="CanvasGroup" index="34"]
+position = Vector2(130, 520)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom17" type="Sprite2D" parent="CanvasGroup" index="35"]
+position = Vector2(88, 544)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom24" type="Sprite2D" parent="CanvasGroup" index="36"]
+position = Vector2(24, 520)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom18" type="Sprite2D" parent="CanvasGroup" index="37"]
+position = Vector2(160, 560)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom19" type="Sprite2D" parent="CanvasGroup" index="38"]
+position = Vector2(112, 592)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom20" type="Sprite2D" parent="CanvasGroup" index="39"]
+position = Vector2(48, 568)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom21" type="Sprite2D" parent="CanvasGroup" index="40"]
+position = Vector2(72, 628)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom22" type="Sprite2D" parent="CanvasGroup" index="41"]
+position = Vector2(8, 608)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom23" type="Sprite2D" parent="CanvasGroup" index="42"]
+position = Vector2(24, 670)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images@Level@Strom5" type="Sprite2D" parent="CanvasGroup" index="43"]
+position = Vector2(416, 216)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom25" type="Sprite2D" parent="CanvasGroup" index="44"]
+position = Vector2(476, 216)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom28" type="Sprite2D" parent="CanvasGroup" index="45"]
+position = Vector2(521, 236)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom26" type="Sprite2D" parent="CanvasGroup" index="46"]
+position = Vector2(475, 272)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom5" type="Sprite2D" parent="CanvasGroup" index="47"]
+position = Vector2(333, 224)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images@Level@Strom8" type="Sprite2D" parent="CanvasGroup" index="48"]
+position = Vector2(376, 260)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom8" type="Sprite2D" parent="CanvasGroup" index="49"]
+position = Vector2(416, 280)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom9" type="Sprite2D" parent="CanvasGroup" index="50"]
+position = Vector2(528, 280)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom10" type="Sprite2D" parent="CanvasGroup" index="51"]
+position = Vector2(704, 372)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom11" type="Sprite2D" parent="CanvasGroup" index="52"]
+position = Vector2(452, 320)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images_Level_Strom27" type="Sprite2D" parent="CanvasGroup" index="53"]
+position = Vector2(504, 332)
+scale = Vector2(3, 3)
+texture = ExtResource("3_i0hxy")
+
+[node name="Images@Level@Strom6" type="Sprite2D" parent="CanvasGroup" index="54"]
 position = Vector2(512, 368)
 scale = Vector2(3, 3)
 texture = ExtResource("3_i0hxy")
 
-[node name="Images@Level@Strom7" type="Sprite2D" parent="CanvasGroup" index="31"]
+[node name="Images@Level@Strom7" type="Sprite2D" parent="CanvasGroup" index="55"]
 position = Vector2(540, 408)
 scale = Vector2(3, 3)
 texture = ExtResource("3_i0hxy")
 
-[node name="Images@Level@Darktrava" type="Sprite2D" parent="CanvasGroup" index="32"]
+[node name="Images@Level@Darktrava" type="Sprite2D" parent="CanvasGroup" index="56"]
 position = Vector2(240, 376)
 scale = Vector2(3, 3)
 texture = ExtResource("5_seo15")
