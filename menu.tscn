@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://dpkfgxc1t0hkp" path="res://art/Audio/panting-2.mp3" id="4_3mm6d"]
 [ext_resource type="AudioStream" uid="uid://b8o7lstsj0xtd" path="res://art/Audio/panting-3.mp3" id="5_cac4d"]
 [ext_resource type="Texture2D" uid="uid://o44frxox7gcb" path="res://art/bigstrom.png" id="8_hv6yc"]
+[ext_resource type="Texture2D" uid="uid://i2bcg30hhy3g" path="res://art/Gazda-Sheet.png" id="8_lp6tf"]
 [ext_resource type="Texture2D" uid="uid://b7cmbhwrcgwe1" path="res://art/Gazda-Sheet.png" id="8_lp6tf"]
 [ext_resource type="Texture2D" uid="uid://cglbv6rgmp71p" path="res://art/bublina-Sheet.png" id="9_0jvid"]
 [ext_resource type="Texture2D" uid="uid://6gy5vl2riidv" path="res://art/darktrava.png" id="11_74ifb"]
