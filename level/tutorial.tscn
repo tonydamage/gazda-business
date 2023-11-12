@@ -1,0 +1,354 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxou7psew7x1r"]
+
+[ext_resource type="PackedScene" uid="uid://c1spiqpafed37" path="res://level/level-base.tscn" id="1_v3sxw"]
+[ext_resource type="Texture2D" uid="uid://yavu4ji0uubp" path="res://art/Strom.png" id="2_dnc1m"]
+[ext_resource type="Texture2D" uid="uid://hemnm88x7m4y" path="res://art/rock.png" id="3_y3i3l"]
+[ext_resource type="Texture2D" uid="uid://buo1caq45ktrl" path="res://art/trava1.png" id="4_0shcf"]
+[ext_resource type="Texture2D" uid="uid://bnnsivql37l4" path="res://art/darktrava.png" id="5_lugbp"]
+
+[node name="BaseLevel" instance=ExtResource("1_v3sxw")]
+
+[node name="ColorRect" parent="." index="0"]
+metadata/_edit_lock_ = true
+
+[node name="LevelBoundary" parent="." index="1"]
+visible = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBoundary" index="1"]
+polygon = PackedVector2Array(216, 208, 192, 320, 168, 408, 136, 520, 104, 600, 48, 688, 24, 776, 24, 872, 48, 928, 96, 960, 184, 984, 312, 984, 392, 976, 480, 928, 504, 848, 504, 752, 464, 672, 408, 592, 392, 552, 368, 464, 344, 368, 352, 280, 384, 216, 536, 152, 672, 152, 648, 1120, -192, 1096, -168, 144, -32, 136)
+
+[node name="plot_front_right" parent="SheepPen" index="6"]
+position = Vector2(153, 32)
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." index="3"]
+position = Vector2(176, 64)
+
+[node name="Paleta" type="Node" parent="CanvasGroup" index="0"]
+
+[node name="Strom" type="Sprite2D" parent="CanvasGroup/Paleta" index="0"]
+position = Vector2(16, 248)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom2" type="Sprite2D" parent="CanvasGroup/Paleta" index="1"]
+position = Vector2(72, 240)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom19" type="Sprite2D" parent="CanvasGroup/Paleta" index="2"]
+position = Vector2(130, 242)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Rock" type="Sprite2D" parent="CanvasGroup/Paleta" index="3"]
+position = Vector2(384, 248)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Rock2" type="Sprite2D" parent="CanvasGroup/Paleta" index="4"]
+position = Vector2(376, 280)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Rock3" type="Sprite2D" parent="CanvasGroup/Paleta" index="5"]
+position = Vector2(368, 320)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Rock4" type="Sprite2D" parent="CanvasGroup/Paleta" index="6"]
+position = Vector2(368, 320)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Strom11" type="Sprite2D" parent="CanvasGroup/Paleta" index="7"]
+position = Vector2(500, 210)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom12" type="Sprite2D" parent="CanvasGroup/Paleta" index="8"]
+position = Vector2(496, 264)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom13" type="Sprite2D" parent="CanvasGroup/Paleta" index="9"]
+position = Vector2(521, 320)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom3" type="Sprite2D" parent="CanvasGroup/Paleta" index="10"]
+position = Vector2(448, 400)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom4" type="Sprite2D" parent="CanvasGroup/Paleta" index="11"]
+position = Vector2(480, 456)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom5" type="Sprite2D" parent="CanvasGroup/Paleta" index="12"]
+position = Vector2(444, 488)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom6" type="Sprite2D" parent="CanvasGroup/Paleta" index="13"]
+position = Vector2(464, 560)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom7" type="Sprite2D" parent="CanvasGroup/Paleta" index="14"]
+position = Vector2(496, 608)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom8" type="Sprite2D" parent="CanvasGroup/Paleta" index="15"]
+position = Vector2(528, 664)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom9" type="Sprite2D" parent="CanvasGroup/Paleta" index="16"]
+position = Vector2(552, 712)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom10" type="Sprite2D" parent="CanvasGroup/Paleta" index="17"]
+position = Vector2(438, 240)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom14" type="Sprite2D" parent="CanvasGroup/Paleta" index="18"]
+position = Vector2(428, 288)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom15" type="Sprite2D" parent="CanvasGroup/Paleta" index="19"]
+position = Vector2(402, 352)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom16" type="Sprite2D" parent="CanvasGroup/Paleta" index="20"]
+position = Vector2(492, 352)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom17" type="Sprite2D" parent="CanvasGroup/Paleta" index="21"]
+position = Vector2(520, 392)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom18" type="Sprite2D" parent="CanvasGroup/Paleta" index="22"]
+position = Vector2(512, 512)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="TravaBezObrysu" type="Sprite2D" parent="CanvasGroup/Paleta" index="23"]
+position = Vector2(216, 464)
+scale = Vector2(3, 3)
+texture = ExtResource("4_0shcf")
+
+[node name="TravaBezObrysu3" type="Sprite2D" parent="CanvasGroup/Paleta" index="24"]
+position = Vector2(216, 464)
+scale = Vector2(3, 3)
+texture = ExtResource("4_0shcf")
+
+[node name="TravaBezObrysu8" type="Sprite2D" parent="CanvasGroup/Paleta" index="25"]
+position = Vector2(139, 656)
+scale = Vector2(3, 3)
+texture = ExtResource("4_0shcf")
+
+[node name="TravaBezObrysu10" type="Sprite2D" parent="CanvasGroup/Paleta" index="26"]
+position = Vector2(88, 808)
+scale = Vector2(3, 3)
+texture = ExtResource("4_0shcf")
+
+[node name="TravaBezObrysu9" type="Sprite2D" parent="CanvasGroup/Paleta" index="27"]
+position = Vector2(456, 776)
+scale = Vector2(3, 3)
+texture = ExtResource("4_0shcf")
+
+[node name="TravaBezObrysu2" type="Sprite2D" parent="CanvasGroup/Paleta" index="28"]
+position = Vector2(296, 548)
+scale = Vector2(3, 3)
+texture = ExtResource("4_0shcf")
+
+[node name="TravaBezObrysu4" type="Sprite2D" parent="CanvasGroup/Paleta" index="29"]
+position = Vector2(400, 680)
+scale = Vector2(3, 3)
+texture = ExtResource("4_0shcf")
+
+[node name="TravaBezObrysu5" type="Sprite2D" parent="CanvasGroup/Paleta" index="30"]
+position = Vector2(400, 680)
+scale = Vector2(3, 3)
+texture = ExtResource("4_0shcf")
+
+[node name="TravaBezObrysu6" type="Sprite2D" parent="CanvasGroup/Paleta" index="31"]
+position = Vector2(312, 368)
+scale = Vector2(3, 3)
+texture = ExtResource("4_0shcf")
+
+[node name="TravaBezObrysu7" type="Sprite2D" parent="CanvasGroup/Paleta" index="32"]
+position = Vector2(264, 272)
+scale = Vector2(3, 3)
+texture = ExtResource("4_0shcf")
+
+[node name="TravaSObrysom" type="Sprite2D" parent="CanvasGroup/Paleta" index="33"]
+position = Vector2(-256, 552)
+scale = Vector2(3, 3)
+texture = ExtResource("5_lugbp")
+
+[node name="Rock5" type="Sprite2D" parent="CanvasGroup/Paleta" index="34"]
+position = Vector2(16, 936)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Rock6" type="Sprite2D" parent="CanvasGroup/Paleta" index="35"]
+position = Vector2(48, 960)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Rock7" type="Sprite2D" parent="CanvasGroup/Paleta" index="36"]
+position = Vector2(376, 392)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Rock8" type="Sprite2D" parent="CanvasGroup/Paleta" index="37"]
+position = Vector2(384, 428)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Rock9" type="Sprite2D" parent="CanvasGroup/Paleta" index="38"]
+position = Vector2(176, 276)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Strom20" type="Sprite2D" parent="CanvasGroup/Paleta" index="39"]
+position = Vector2(4, 290)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom21" type="Sprite2D" parent="CanvasGroup/Paleta" index="40"]
+position = Vector2(64, 312)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom22" type="Sprite2D" parent="CanvasGroup/Paleta" index="41"]
+position = Vector2(118, 284)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Rock13" type="Sprite2D" parent="CanvasGroup/Paleta" index="42"]
+position = Vector2(164, 318)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Strom23" type="Sprite2D" parent="CanvasGroup/Paleta" index="43"]
+position = Vector2(-16, 344)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom24" type="Sprite2D" parent="CanvasGroup/Paleta" index="44"]
+position = Vector2(48, 368)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom28" type="Sprite2D" parent="CanvasGroup/Paleta" index="45"]
+position = Vector2(0, 404)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom25" type="Sprite2D" parent="CanvasGroup/Paleta" index="46"]
+position = Vector2(102, 340)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom26" type="Sprite2D" parent="CanvasGroup/Paleta" index="47"]
+position = Vector2(94, 388)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom27" type="Sprite2D" parent="CanvasGroup/Paleta" index="48"]
+position = Vector2(94, 388)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom29" type="Sprite2D" parent="CanvasGroup/Paleta" index="49"]
+position = Vector2(48, 448)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Strom30" type="Sprite2D" parent="CanvasGroup/Paleta" index="50"]
+position = Vector2(12, 496)
+scale = Vector2(3, 3)
+texture = ExtResource("2_dnc1m")
+
+[node name="Rock14" type="Sprite2D" parent="CanvasGroup/Paleta" index="51"]
+position = Vector2(148, 374)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Rock10" type="Sprite2D" parent="CanvasGroup/Paleta" index="52"]
+position = Vector2(130, 424)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Rock11" type="Sprite2D" parent="CanvasGroup/Paleta" index="53"]
+position = Vector2(120, 472)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="Rock12" type="Sprite2D" parent="CanvasGroup/Paleta" index="54"]
+position = Vector2(104, 512)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y3i3l")
+
+[node name="TravaSObrysom2" type="Sprite2D" parent="CanvasGroup/Paleta" index="55"]
+position = Vector2(100, 528)
+scale = Vector2(3, 3)
+texture = ExtResource("5_lugbp")
+
+[node name="TravaSObrysom3" type="Sprite2D" parent="CanvasGroup/Paleta" index="56"]
+position = Vector2(84, 568)
+scale = Vector2(3, 3)
+texture = ExtResource("5_lugbp")
+
+[node name="TravaSObrysom4" type="Sprite2D" parent="CanvasGroup/Paleta" index="57"]
+position = Vector2(60, 608)
+scale = Vector2(3, 3)
+texture = ExtResource("5_lugbp")
+
+[node name="TravaSObrysom5" type="Sprite2D" parent="CanvasGroup/Paleta" index="58"]
+position = Vector2(36, 648)
+scale = Vector2(3, 3)
+texture = ExtResource("5_lugbp")
+
+[node name="TravaSObrysom6" type="Sprite2D" parent="CanvasGroup/Paleta" index="59"]
+position = Vector2(18, 700)
+scale = Vector2(3, 3)
+texture = ExtResource("5_lugbp")
+
+[node name="TravaSObrysom7" type="Sprite2D" parent="CanvasGroup/Paleta" index="60"]
+position = Vector2(-20, 744)
+scale = Vector2(3, 3)
+texture = ExtResource("5_lugbp")
+
+[node name="Sheep3" parent="Sheeps" index="0"]
+position = Vector2(256, 632)
+
+[node name="Strom" parent="Paleta" index="0"]
+visible = false
+
+[node name="Rock" parent="Paleta" index="1"]
+visible = false
+
+[node name="TravaBezObrysu" parent="Paleta" index="2"]
+visible = false
+
+[node name="TravaSObrysom" parent="Paleta" index="3"]
+visible = false
+
+[node name="Drag Dog" type="Label" parent="." index="9"]
+offset_left = 64.0
+offset_top = 80.0
+offset_right = 480.0
+offset_bottom = 152.0
+text = "Drag a dog to move.
+Get sheeps to pen."
