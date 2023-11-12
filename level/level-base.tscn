@@ -80,6 +80,10 @@ autoplay = true
 
 [node name="Sheeps" type="Node" parent="."]
 
+[node name="SheepSleeping" parent="Sheeps" node_paths=PackedStringArray("AppearEffect") instance=ExtResource("4_njgos")]
+position = Vector2(484, 59)
+AppearEffect = NodePath("../Sheep3/DogWhining")
+
 [node name="Sheep3" parent="Sheeps" instance=ExtResource("4_njgos")]
 position = Vector2(347, 654)
 
