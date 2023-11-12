@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_a86jg"]
 [ext_resource type="Script" path="res://scripts/SheepPen.gd" id="2_ld6np"]
 [ext_resource type="PackedScene" uid="uid://blchuywajdsdc" path="res://assets/dog.tscn" id="3_o0r1p"]
-[ext_resource type="Texture2D" uid="uid://bnnsivql37l4" path="res://art/darktrava.png" id="4_860c7"]
+[ext_resource type="Texture2D" uid="uid://6gy5vl2riidv" path="res://art/darktrava.png" id="4_860c7"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="4_njgos"]
-[ext_resource type="PackedScene" path="res://assets/plot_back.tscn" id="6_q23lf"]
+[ext_resource type="PackedScene" uid="uid://cui6mfu152oaf" path="res://assets/plot_back.tscn" id="6_q23lf"]
 [ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="6_xonnp"]
-[ext_resource type="PackedScene" path="res://assets/plot_side.tscn" id="7_dh5fn"]
+[ext_resource type="PackedScene" uid="uid://ce1kranhyatpi" path="res://assets/plot_side.tscn" id="7_dh5fn"]
 [ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="7_m4ckq"]
 [ext_resource type="Texture2D" uid="uid://cmc2phbucucyo" path="res://art/rock.png" id="8_7c31o"]
 [ext_resource type="Texture2D" uid="uid://hfb8uyfo4o7t" path="res://art/Strom.png" id="9_2q6kh"]
@@ -139,6 +139,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
+theme_override_font_sizes/font_size = 30
 disabled = true
 text = "NEXT LEVEL"
 script = ExtResource("13_m7rbp")
