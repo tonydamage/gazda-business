@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bl0fr2tvqrjy6"]
+[gd_scene load_steps=6 format=3 uid="uid://cujkponbs8jkv"]
 
 [ext_resource type="PackedScene" uid="uid://c1spiqpafed37" path="res://level/level-base.tscn" id="1_poojm"]
+[ext_resource type="Texture2D" uid="uid://hemnm88x7m4y" path="res://art/rock.png" id="2_cllt5"]
+[ext_resource type="PackedScene" path="res://assets/plot_front.tscn" id="3_k02gx"]
+[ext_resource type="PackedScene" path="res://assets/plot_single_vertical.tscn" id="4_b6yav"]
+[ext_resource type="PackedScene" path="res://assets/plot_single.tscn" id="5_kjr75"]
 
 [node name="BaseLevel" instance=ExtResource("1_poojm")]
 
@@ -10,5 +14,22 @@ polygon = PackedVector2Array(552, 616, 528, 560, 496, 528, 432, 520, 360, 528, 2
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelBoundary" index="2"]
 polygon = PackedVector2Array(-24, 904, 8, 872, 80, 832, 144, 840, 208, 800, 264, 784, 304, 768, 320, 736, 296, 728, 256, 736, 200, 776, 136, 816, 56, 800, 32, 776, 8, 712, -8, 616, -8, 528, 16, 424, 64, 384, 144, 360, 200, 328, 216, 296, 216, 248, 200, 208, -64, 208, -56, 912)
 
+[node name="Rock" parent="Images/3x" index="0"]
+position = Vector2(112, 170.667)
+
+[node name="Rock2" type="Sprite2D" parent="Images/3x" index="3"]
+position = Vector2(-130.667, 328)
+texture = ExtResource("2_cllt5")
+
+[node name="plot_front" parent="Images" index="1" instance=ExtResource("3_k02gx")]
+position = Vector2(296, 352)
+scale = Vector2(3, 3)
+
 [node name="Sheep3" parent="Sheeps" index="0"]
 position = Vector2(456, 848)
+
+[node name="Plot_Vertical" parent="." index="8" instance=ExtResource("4_b6yav")]
+position = Vector2(177, 487)
+
+[node name="Plot" parent="." index="9" instance=ExtResource("5_kjr75")]
+position = Vector2(136, 569)
