@@ -3,6 +3,12 @@ class_name Sheep
 
 @export var AppearEffect: AudioStreamPlayer = null
 @export var IsInPen = false;
+	
+func _process(delta):
+	if IsInPen:
+		$Sprite.animation = "sleep"
+	else: 
+		$Sprite.animation = "default"
 
 var start_pos = Vector2.ZERO
 var reset = false;
