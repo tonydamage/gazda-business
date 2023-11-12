@@ -416,7 +416,7 @@ position = Vector2(144, 656)
 [node name="Sheep3" parent="Sheeps" index="2"]
 position = Vector2(72, 720)
 
-[node name="Dog" parent="." index="6"]
+[node name="Dog" parent="." index="7"]
 position = Vector2(352, 830)
 
 [node name="Foreground" type="Node" parent="." index="8"]
@@ -475,9 +475,6 @@ texture = ExtResource("4_i58xx")
 position = Vector2(32.3333, 5)
 texture = ExtResource("5_yiq0o")
 
-[node name="Next Level" parent="." index="11"]
-text = "PLAY AGAIN"
-
 [node name="Farmar" type="AnimatedSprite2D" parent="." index="12"]
 position = Vector2(56, 544)
 scale = Vector2(3, 3)
@@ -499,3 +496,6 @@ autoplay = "default"
 position = Vector2(60, 464)
 sprite_frames = SubResource("SpriteFrames_fue0b")
 autoplay = "default"
+
+[node name="Next Level" parent="." index="16"]
+text = "PLAY AGAIN"
