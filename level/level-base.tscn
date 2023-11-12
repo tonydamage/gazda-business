@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" path="res://assets/plot_side.tscn" id="7_dh5fn"]
 [ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="7_m4ckq"]
 [ext_resource type="Texture2D" uid="uid://cmc2phbucucyo" path="res://art/rock.png" id="8_7c31o"]
-[ext_resource type="Texture2D" uid="uid://hfb8uyfo4o7t" path="res://art/Strom.png" id="9_2q6kh"]
+[ext_resource type="Texture2D" uid="uid://bh0ub8q4g2fdw" path="res://art/Strom.png" id="9_2q6kh"]
 [ext_resource type="PackedScene" uid="uid://dks6bgrce6eak" path="res://assets/plot_front.tscn" id="9_rf1po"]
 [ext_resource type="Script" path="res://level/Menu.gd" id="13_bjwf7"]
 [ext_resource type="Script" path="res://level/Next Level.gd" id="13_m7rbp"]

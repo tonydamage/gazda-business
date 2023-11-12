@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbpwaaiuf0oax"]
+[gd_scene load_steps=6 format=3 uid="uid://fpuxy0mw44tk"]
 
 [ext_resource type="PackedScene" uid="uid://c1spiqpafed37" path="res://level/level-base.tscn" id="1_td58a"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="2_4i0au"]
-[ext_resource type="Texture2D" uid="uid://yavu4ji0uubp" path="res://art/Strom.png" id="3_i0hxy"]
-[ext_resource type="Texture2D" uid="uid://hemnm88x7m4y" path="res://art/rock.png" id="3_k54j4"]
-[ext_resource type="Texture2D" uid="uid://bnnsivql37l4" path="res://art/darktrava.png" id="5_seo15"]
+[ext_resource type="Texture2D" uid="uid://bh0ub8q4g2fdw" path="res://art/Strom.png" id="3_i0hxy"]
+[ext_resource type="Texture2D" uid="uid://cmc2phbucucyo" path="res://art/rock.png" id="3_k54j4"]
+[ext_resource type="Texture2D" uid="uid://6gy5vl2riidv" path="res://art/darktrava.png" id="5_seo15"]
 
 [node name="BaseLevel" instance=ExtResource("1_td58a")]
 

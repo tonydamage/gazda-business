@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dj4jbtl3s7m7y"]
+[gd_scene load_steps=7 format=3 uid="uid://dps1v4070rarl"]
 
 [ext_resource type="PackedScene" uid="uid://c1spiqpafed37" path="res://level/level-base.tscn" id="1_dn233"]
-[ext_resource type="Texture2D" uid="uid://hemnm88x7m4y" path="res://art/rock.png" id="2_ikkxn"]
+[ext_resource type="Texture2D" uid="uid://cmc2phbucucyo" path="res://art/rock.png" id="2_ikkxn"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="2_y4hhj"]
+[ext_resource type="Texture2D" uid="uid://bh0ub8q4g2fdw" path="res://art/Strom.png" id="3_cjtyv"]
+[ext_resource type="Texture2D" uid="uid://6gy5vl2riidv" path="res://art/darktrava.png" id="4_dqev0"]
+[ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="5_bftjw"]
 
 [node name="BaseLevel2" instance=ExtResource("1_dn233")]
 
@@ -112,6 +115,71 @@ texture = ExtResource("2_ikkxn")
 [node name="Images@Node2D" type="Node2D" parent="CanvasGroup" index="22"]
 scale = Vector2(3, 3)
 
+[node name="Strom" type="Sprite2D" parent="CanvasGroup" index="23"]
+position = Vector2(18.6667, 74.6667)
+scale = Vector2(2, 2)
+texture = ExtResource("3_cjtyv")
+
+[node name="Strom2" type="Sprite2D" parent="CanvasGroup" index="24"]
+position = Vector2(158.667, 77.3333)
+scale = Vector2(2, 2)
+texture = ExtResource("3_cjtyv")
+
+[node name="TravaSObrysom" type="Sprite2D" parent="CanvasGroup" index="25"]
+position = Vector2(22, 96)
+texture = ExtResource("4_dqev0")
+
+[node name="TravaSObrysom2" type="Sprite2D" parent="CanvasGroup" index="26"]
+position = Vector2(168, 98.6667)
+texture = ExtResource("4_dqev0")
+
+[node name="TravaSObrysom3" type="Sprite2D" parent="CanvasGroup" index="27"]
+position = Vector2(2.66666, 146)
+texture = ExtResource("4_dqev0")
+
+[node name="TravaSObrysom5" type="Sprite2D" parent="CanvasGroup" index="28"]
+position = Vector2(152.667, 106.667)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_dqev0")
+
+[node name="Strom3" type="Sprite2D" parent="CanvasGroup" index="29"]
+position = Vector2(176, 125.333)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_cjtyv")
+
+[node name="Strom4" type="Sprite2D" parent="CanvasGroup" index="30"]
+position = Vector2(12.3333, 120)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_cjtyv")
+
+[node name="TravaSObrysom4" type="Sprite2D" parent="CanvasGroup" index="31"]
+position = Vector2(177.667, 136)
+texture = ExtResource("4_dqev0")
+
+[node name="TravaBezObrysu" type="Sprite2D" parent="CanvasGroup" index="32"]
+position = Vector2(61.3333, 80.6667)
+texture = ExtResource("5_bftjw")
+
+[node name="TravaBezObrysu2" type="Sprite2D" parent="CanvasGroup" index="33"]
+position = Vector2(157.333, 282.667)
+texture = ExtResource("5_bftjw")
+
+[node name="TravaBezObrysu3" type="Sprite2D" parent="CanvasGroup" index="34"]
+position = Vector2(30, 208)
+texture = ExtResource("5_bftjw")
+
+[node name="TravaBezObrysu4" type="Sprite2D" parent="CanvasGroup" index="35"]
+position = Vector2(117.333, 114.667)
+texture = ExtResource("5_bftjw")
+
+[node name="TravaBezObrysu5" type="Sprite2D" parent="CanvasGroup" index="36"]
+position = Vector2(141.333, 205.333)
+texture = ExtResource("5_bftjw")
+
+[node name="TravaBezObrysu6" type="Sprite2D" parent="CanvasGroup" index="37"]
+position = Vector2(53.3333, 266.667)
+texture = ExtResource("5_bftjw")
+
 [node name="Sheep3" parent="Sheeps" index="0"]
 position = Vector2(352, 592)
 
@@ -142,5 +210,5 @@ position = Vector2(152, 448)
 [node name="Sheep10" parent="Sheeps" index="9" instance=ExtResource("2_y4hhj")]
 position = Vector2(347, 440)
 
-[node name="Next Level" parent="." index="8"]
+[node name="Next Level" parent="." index="10"]
 PathToNextLevel = "res://level/mega_level.tscn"
