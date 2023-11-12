@@ -6,17 +6,17 @@
 [ext_resource type="Texture2D" uid="uid://bnnsivql37l4" path="res://art/darktrava.png" id="4_860c7"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="4_njgos"]
 [ext_resource type="PackedScene" path="res://assets/plot_back.tscn" id="6_q23lf"]
-[ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="6_xonnp"]
+[ext_resource type="Texture2D" uid="uid://buo1caq45ktrl" path="res://art/trava1.png" id="6_xonnp"]
 [ext_resource type="PackedScene" path="res://assets/plot_side.tscn" id="7_dh5fn"]
 [ext_resource type="AudioStream" uid="uid://dxwf17xtmqwhj" path="res://art/Audio/lelangen-69215.mp3" id="7_m4ckq"]
-[ext_resource type="Texture2D" uid="uid://cmc2phbucucyo" path="res://art/rock.png" id="8_7c31o"]
-[ext_resource type="Texture2D" uid="uid://hfb8uyfo4o7t" path="res://art/Strom.png" id="9_2q6kh"]
+[ext_resource type="Texture2D" uid="uid://hemnm88x7m4y" path="res://art/rock.png" id="8_7c31o"]
+[ext_resource type="Texture2D" uid="uid://yavu4ji0uubp" path="res://art/Strom.png" id="9_2q6kh"]
 [ext_resource type="PackedScene" uid="uid://dks6bgrce6eak" path="res://assets/plot_front.tscn" id="9_rf1po"]
 [ext_resource type="Script" path="res://level/Next Level.gd" id="13_m7rbp"]
 [ext_resource type="AudioStream" uid="uid://cvi2nr6wlfaa1" path="res://art/Audio/panting-1.mp3" id="14_6e242"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mguhg"]
-size = Vector2(544, 216)
+size = Vector2(544, 200)
 
 [node name="BaseLevel" type="Node"]
 script = ExtResource("1_a86jg")
@@ -45,7 +45,7 @@ sheepCollection = NodePath("../Sheeps")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SheepPen"]
-position = Vector2(96, 44)
+position = Vector2(96, 36)
 shape = SubResource("RectangleShape2D_mguhg")
 
 [node name="Polygon2D" type="Polygon2D" parent="SheepPen"]

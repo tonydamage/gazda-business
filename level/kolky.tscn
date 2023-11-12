@@ -1,110 +1,116 @@
 [gd_scene load_steps=4 format=3 uid="uid://dj4jbtl3s7m7y"]
 
 [ext_resource type="PackedScene" uid="uid://c1spiqpafed37" path="res://level/level-base.tscn" id="1_dn233"]
-[ext_resource type="Texture2D" uid="uid://cmc2phbucucyo" path="res://art/rock.png" id="2_ikkxn"]
+[ext_resource type="Texture2D" uid="uid://hemnm88x7m4y" path="res://art/rock.png" id="2_ikkxn"]
 [ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="2_y4hhj"]
 
 [node name="BaseLevel2" instance=ExtResource("1_dn233")]
 
-[node name="Images@Node2D@Rock" type="Sprite2D" parent="." index="0"]
-position = Vector2(18.6667, 144)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock2" type="Sprite2D" parent="." index="1"]
-position = Vector2(26.6667, 130.667)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock3" type="Sprite2D" parent="." index="2"]
-position = Vector2(34.6667, 120)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock4" type="Sprite2D" parent="." index="3"]
-position = Vector2(16, 149.333)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock5" type="Sprite2D" parent="." index="4"]
-position = Vector2(13.3333, 157.333)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock6" type="Sprite2D" parent="." index="5"]
-position = Vector2(6.66667, 168)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock7" type="Sprite2D" parent="." index="6"]
-position = Vector2(5.33333, 178.667)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock15" type="Sprite2D" parent="." index="7"]
-position = Vector2(0, 192)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock16" type="Sprite2D" parent="." index="8"]
-position = Vector2(42.6667, 80.6667)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock17" type="Sprite2D" parent="." index="9"]
-position = Vector2(40, 90.6667)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock18" type="Sprite2D" parent="." index="10"]
-position = Vector2(40, 104)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock19" type="Sprite2D" parent="." index="11"]
-position = Vector2(40, 104)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock20" type="Sprite2D" parent="." index="12"]
-position = Vector2(162.667, 138.667)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock21" type="Sprite2D" parent="." index="13"]
-position = Vector2(162.667, 138.667)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock22" type="Sprite2D" parent="." index="14"]
-position = Vector2(173.333, 152)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock8" type="Sprite2D" parent="." index="15"]
-position = Vector2(136, 80)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock9" type="Sprite2D" parent="." index="16"]
-position = Vector2(136, 90.6667)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock10" type="Sprite2D" parent="." index="17"]
-position = Vector2(136, 101.333)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock11" type="Sprite2D" parent="." index="18"]
-position = Vector2(138.667, 112)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock12" type="Sprite2D" parent="." index="19"]
-position = Vector2(144, 120)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock13" type="Sprite2D" parent="." index="20"]
-position = Vector2(152, 128)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D@Rock14" type="Sprite2D" parent="." index="21"]
-position = Vector2(152, 128)
-texture = ExtResource("2_ikkxn")
-
-[node name="Images@Node2D" type="Node2D" parent="." index="22"]
-scale = Vector2(3, 3)
+[node name="LevelBoundary" parent="." index="1"]
+visible = true
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBoundary" index="1"]
-polygon = PackedVector2Array(-48, 208, 144, 208, 136, 320, 72, 416, 32, 512, 8, 624, -16, 752, -16, 960, 248, 984, 560, 976, 560, 656, 520, 480, 448, 400, 384, 320, 392, 216, 800, 216, 800, 1280, -224, 1184, -216, 256)
+polygon = PackedVector2Array(-48, 208, -16, 184, 128, 184, 208, 208, 168, 248, 136, 320, 72, 416, 32, 512, 8, 624, -16, 752, -16, 960, 248, 984, 560, 976, 560, 656, 520, 480, 448, 400, 384, 320, 392, 216, 480, 192, 688, 192, 800, 216, 800, 1280, -224, 1184, -216, 256)
 
 [node name="plot_front_left" parent="SheepPen" index="5"]
 position = Vector2(-302, 32)
 
 [node name="plot_front_right" parent="SheepPen" index="6"]
 position = Vector2(154, 32)
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." index="3"]
+scale = Vector2(3, 3)
+
+[node name="Images@Node2D@Rock" type="Sprite2D" parent="CanvasGroup" index="0"]
+position = Vector2(18.6667, 144)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock2" type="Sprite2D" parent="CanvasGroup" index="1"]
+position = Vector2(26.6667, 130.667)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock3" type="Sprite2D" parent="CanvasGroup" index="2"]
+position = Vector2(34.6667, 120)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock4" type="Sprite2D" parent="CanvasGroup" index="3"]
+position = Vector2(16, 149.333)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock5" type="Sprite2D" parent="CanvasGroup" index="4"]
+position = Vector2(13.3333, 157.333)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock6" type="Sprite2D" parent="CanvasGroup" index="5"]
+position = Vector2(6.66667, 168)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock7" type="Sprite2D" parent="CanvasGroup" index="6"]
+position = Vector2(5.33333, 178.667)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock15" type="Sprite2D" parent="CanvasGroup" index="7"]
+position = Vector2(0, 192)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock16" type="Sprite2D" parent="CanvasGroup" index="8"]
+position = Vector2(42.6667, 80.6667)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock17" type="Sprite2D" parent="CanvasGroup" index="9"]
+position = Vector2(40, 90.6667)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock18" type="Sprite2D" parent="CanvasGroup" index="10"]
+position = Vector2(40, 104)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock19" type="Sprite2D" parent="CanvasGroup" index="11"]
+position = Vector2(40, 104)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock20" type="Sprite2D" parent="CanvasGroup" index="12"]
+position = Vector2(162.667, 138.667)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock21" type="Sprite2D" parent="CanvasGroup" index="13"]
+position = Vector2(162.667, 138.667)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock22" type="Sprite2D" parent="CanvasGroup" index="14"]
+position = Vector2(173.333, 152)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock8" type="Sprite2D" parent="CanvasGroup" index="15"]
+position = Vector2(136, 80)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock9" type="Sprite2D" parent="CanvasGroup" index="16"]
+position = Vector2(136, 90.6667)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock10" type="Sprite2D" parent="CanvasGroup" index="17"]
+position = Vector2(136, 101.333)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock11" type="Sprite2D" parent="CanvasGroup" index="18"]
+position = Vector2(138.667, 112)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock12" type="Sprite2D" parent="CanvasGroup" index="19"]
+position = Vector2(144, 120)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock13" type="Sprite2D" parent="CanvasGroup" index="20"]
+position = Vector2(152, 128)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D@Rock14" type="Sprite2D" parent="CanvasGroup" index="21"]
+position = Vector2(152, 128)
+texture = ExtResource("2_ikkxn")
+
+[node name="Images@Node2D" type="Node2D" parent="CanvasGroup" index="22"]
+scale = Vector2(3, 3)
 
 [node name="Sheep3" parent="Sheeps" index="0"]
 position = Vector2(352, 592)
@@ -136,5 +142,5 @@ position = Vector2(152, 448)
 [node name="Sheep10" parent="Sheeps" index="9" instance=ExtResource("2_y4hhj")]
 position = Vector2(347, 440)
 
-[node name="Next Level" parent="." index="30"]
+[node name="Next Level" parent="." index="8"]
 PathToNextLevel = "res://level/mega_level.tscn"
