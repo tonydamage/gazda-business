@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cvi2nr6wlfaa1" path="res://art/Audio/panting-1.mp3" id="3_mg3yl"]
 [ext_resource type="AudioStream" uid="uid://dpkfgxc1t0hkp" path="res://art/Audio/panting-2.mp3" id="4_3mm6d"]
 [ext_resource type="AudioStream" uid="uid://b8o7lstsj0xtd" path="res://art/Audio/panting-3.mp3" id="5_cac4d"]
-[ext_resource type="Texture2D" uid="uid://bq6wkjly4n4rj" path="res://art/Gazda-Sheet.png" id="8_lp6tf"]
+[ext_resource type="Texture2D" uid="uid://i2bcg30hhy3g" path="res://art/Gazda-Sheet.png" id="8_lp6tf"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ct8y1"]
 streams_count = 3
