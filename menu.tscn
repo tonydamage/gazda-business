@@ -7,11 +7,12 @@
 [ext_resource type="AudioStream" uid="uid://cvi2nr6wlfaa1" path="res://art/Audio/panting-1.mp3" id="3_mg3yl"]
 [ext_resource type="AudioStream" uid="uid://dpkfgxc1t0hkp" path="res://art/Audio/panting-2.mp3" id="4_3mm6d"]
 [ext_resource type="AudioStream" uid="uid://b8o7lstsj0xtd" path="res://art/Audio/panting-3.mp3" id="5_cac4d"]
-[ext_resource type="Texture2D" uid="uid://cqbuo8gkvc623" path="res://art/bigstrom.png" id="8_hv6yc"]
-[ext_resource type="Texture2D" uid="uid://brcnv474di672" path="res://art/bublina-Sheet.png" id="9_0jvid"]
+[ext_resource type="Texture2D" uid="uid://dufsf40w3ktnr" path="res://art/bigstrom.png" id="8_hv6yc"]
+[ext_resource type="Texture2D" uid="uid://cfshqnygpyjc7" path="res://art/Gazda-Sheet.png" id="8_lp6tf"]
+[ext_resource type="Texture2D" uid="uid://h2la38uooqub" path="res://art/bublina-Sheet.png" id="9_0jvid"]
 [ext_resource type="Texture2D" uid="uid://bnnsivql37l4" path="res://art/darktrava.png" id="11_74ifb"]
 [ext_resource type="Texture2D" uid="uid://diem7kwb24bpy" path="res://art/sheep/pasak-Sheet.png" id="12_hep7u"]
-[ext_resource type="Texture2D" uid="uid://dn7qaoufw17mn" path="res://art/trava1.png" id="12_r6prb"]
+[ext_resource type="Texture2D" uid="uid://buo1caq45ktrl" path="res://art/trava1.png" id="12_r6prb"]
 
 [sub_resource type="SystemFont" id="SystemFont_cvho2"]
 
