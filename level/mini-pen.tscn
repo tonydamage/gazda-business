@@ -1,0 +1,501 @@
+[gd_scene load_steps=41 format=3 uid="uid://cg8dsegs75j7e"]
+
+[ext_resource type="PackedScene" uid="uid://c1spiqpafed37" path="res://level/level-base.tscn" id="1_wh67o"]
+[ext_resource type="PackedScene" uid="uid://bl7avmfgm12e2" path="res://assets/sheep.tscn" id="2_q8q7b"]
+[ext_resource type="Texture2D" uid="uid://c7t3nmk8bf5di" path="res://art/Logs.png" id="3_y586b"]
+[ext_resource type="Texture2D" uid="uid://hemnm88x7m4y" path="res://art/rock.png" id="4_i58xx"]
+[ext_resource type="Texture2D" uid="uid://bnnsivql37l4" path="res://art/darktrava.png" id="5_yiq0o"]
+[ext_resource type="Texture2D" uid="uid://t283sh38wjua" path="res://art/strombigalter2.png" id="6_qcgv4"]
+[ext_resource type="Texture2D" uid="uid://cfshqnygpyjc7" path="res://art/Gazda-Sheet.png" id="7_von4g"]
+[ext_resource type="Texture2D" uid="uid://h2la38uooqub" path="res://art/bublina-Sheet.png" id="8_2goyi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjpaf"]
+atlas = ExtResource("7_von4g")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3e24"]
+atlas = ExtResource("7_von4g")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p135h"]
+atlas = ExtResource("7_von4g")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stf6r"]
+atlas = ExtResource("7_von4g")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf4gh"]
+atlas = ExtResource("7_von4g")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7d553"]
+atlas = ExtResource("7_von4g")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbfoq"]
+atlas = ExtResource("7_von4g")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ue6h7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjpaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3e24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p135h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stf6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf4gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7d553")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbfoq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbj00"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmn22"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcrva"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo6mw"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3458"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0hrh"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ck7q"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w65vq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbj00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmn22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcrva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo6mw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3458")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0hrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ck7q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3cvt"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wskgs"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjii2"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7hfj"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mtl3"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4plv"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64d3c"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_swllg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3cvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wskgs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjii2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7hfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mtl3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4plv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64d3c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20sgw"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ywkq"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxquy"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yd1u"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06bxh"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miv4w"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qvrj"]
+atlas = ExtResource("8_2goyi")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fue0b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20sgw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ywkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxquy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yd1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06bxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miv4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qvrj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="BaseLevel" instance=ExtResource("1_wh67o")]
+
+[node name="LevelBoundary" parent="." index="1"]
+visible = true
+
+[node name="CollisionPolygon2D" parent="LevelBoundary" index="0"]
+polygon = PackedVector2Array(0, 64, 8, 32, 16, 16, 32, 8, 64, 0, 472, 0, 504, 8, 520, 16, 528, 32, 536, 64, 536, 896, 528, 928, 520, 944, 504, 952, 472, 960, 56, 960, 32, 952, 16, 944, 8, 928, 0, 896, 0, 64, -72, 64, -64, 1016, 600, 1016, 606.444, 113.78, 608, -104, -72, -104, -72, 64)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBoundary" index="1"]
+polygon = PackedVector2Array(312, 32, 216, 48, 144, 88, 88, 160, 48, 224, 32, 280, 40, 352, 72, 384, 128, 416, 192, 432, 296, 448, 320, 456, 328, 472, 320, 488, 296, 496, 184, 520, 80, 592, 0, 672, -1.7421, 736.459, 8, 808, 24, 856, 56, 904, 104, 936, 156.291, 956.112, 224, 968, 568, 976, 528, 832, 496, 768, 448, 728, 384, 704, 312, 704, 288, 688, 313.824, 668.457, 344, 664, 400, 648, 448, 616, 496, 576, 528, 536, 536, 472, 536, 408, 512, 344, 448, 296, 392, 264, 336, 240, 312, 208, 328, 192, 536, 192, 528, 32, 360, 32, 336, -88, 848, -88, 848, 1104, -168, 1104, -176, -96, 336, -88)
+
+[node name="CollisionShape2D" parent="SheepPen" index="0"]
+position = Vector2(432, 36)
+
+[node name="Polygon2D" parent="SheepPen" index="1"]
+polygon = PackedVector2Array(160, -8, 264, -8, 264, 88, 160, 88, 160, 36)
+
+[node name="plot_back" parent="SheepPen" index="2"]
+position = Vector2(-462, -1082)
+
+[node name="plot_side_left" parent="SheepPen" index="3"]
+position = Vector2(448, 184)
+
+[node name="plot_front_left" parent="SheepPen" index="5"]
+position = Vector2(-240, 296)
+
+[node name="Node" type="Node" parent="." index="4"]
+
+[node name="Logs3" type="Sprite2D" parent="Node" index="0"]
+position = Vector2(40, 409)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y586b")
+
+[node name="Logs4" type="Sprite2D" parent="Node" index="1"]
+position = Vector2(40, 88)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y586b")
+
+[node name="Logs5" type="Sprite2D" parent="Node" index="2"]
+position = Vector2(104, 88)
+scale = Vector2(3, 3)
+texture = ExtResource("3_y586b")
+
+[node name="Rock" type="Sprite2D" parent="Node" index="3"]
+position = Vector2(336, 688)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock2" type="Sprite2D" parent="Node" index="4"]
+position = Vector2(384, 672)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock14" type="Sprite2D" parent="Node" index="5"]
+position = Vector2(48, 168)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock4" type="Sprite2D" parent="Node" index="6"]
+position = Vector2(72, 139)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock6" type="Sprite2D" parent="Node" index="7"]
+position = Vector2(32, 200)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock15" type="Sprite2D" parent="Node" index="8"]
+position = Vector2(8, 240)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock16" type="Sprite2D" parent="Node" index="9"]
+position = Vector2(96, 432)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock5" type="Sprite2D" parent="Node" index="10"]
+position = Vector2(168, 508)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock7" type="Sprite2D" parent="Node" index="11"]
+position = Vector2(24, 616)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock8" type="Sprite2D" parent="Node" index="12"]
+position = Vector2(410, 696)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock13" type="Sprite2D" parent="Node" index="13"]
+position = Vector2(410, 696)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock9" type="Sprite2D" parent="Node" index="14"]
+position = Vector2(457, 712)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock10" type="Sprite2D" parent="Node" index="15"]
+position = Vector2(496, 736)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock18" type="Sprite2D" parent="Node" index="16"]
+position = Vector2(8, 872)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock19" type="Sprite2D" parent="Node" index="17"]
+position = Vector2(24, 896)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock20" type="Sprite2D" parent="Node" index="18"]
+position = Vector2(48, 928)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock21" type="Sprite2D" parent="Node" index="19"]
+position = Vector2(82, 952)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock22" type="Sprite2D" parent="Node" index="20"]
+position = Vector2(120, 968)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock11" type="Sprite2D" parent="Node" index="21"]
+position = Vector2(528, 768)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock12" type="Sprite2D" parent="Node" index="22"]
+position = Vector2(544, 800)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="TravaSObrysom" type="Sprite2D" parent="Node" index="23"]
+position = Vector2(536, 600)
+scale = Vector2(3, 3)
+texture = ExtResource("5_yiq0o")
+
+[node name="TravaSObrysom2" type="Sprite2D" parent="Node" index="24"]
+position = Vector2(491, 624)
+scale = Vector2(3, 3)
+texture = ExtResource("5_yiq0o")
+
+[node name="TravaSObrysom3" type="Sprite2D" parent="Node" index="25"]
+position = Vector2(448, 648)
+scale = Vector2(3, 3)
+texture = ExtResource("5_yiq0o")
+
+[node name="TravaSObrysom4" type="Sprite2D" parent="Node" index="26"]
+position = Vector2(512, 656)
+scale = Vector2(3, 3)
+texture = ExtResource("5_yiq0o")
+
+[node name="TravaSObrysom5" type="Sprite2D" parent="Node" index="27"]
+position = Vector2(521, 696)
+scale = Vector2(3, 3)
+texture = ExtResource("5_yiq0o")
+
+[node name="TravaSObrysom6" type="Sprite2D" parent="Node" index="28"]
+position = Vector2(472, 680)
+scale = Vector2(3, 3)
+texture = ExtResource("5_yiq0o")
+
+[node name="Sheep4" parent="Sheeps" index="1" instance=ExtResource("2_q8q7b")]
+position = Vector2(144, 656)
+
+[node name="Sheep3" parent="Sheeps" index="2"]
+position = Vector2(72, 720)
+
+[node name="Dog" parent="." index="6"]
+position = Vector2(352, 830)
+
+[node name="Foreground" type="Node" parent="." index="8"]
+
+[node name="Strombigalter3" type="Sprite2D" parent="Foreground" index="0"]
+position = Vector2(491, 192)
+scale = Vector2(3, 3)
+texture = ExtResource("6_qcgv4")
+
+[node name="Rock14" type="Sprite2D" parent="Foreground" index="1"]
+position = Vector2(960, 1952)
+scale = Vector2(9, 9)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock4" type="Sprite2D" parent="Foreground" index="2"]
+position = Vector2(520, 304)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock4" type="Sprite2D" parent="Foreground/Rock4" index="0"]
+position = Vector2(520, 304)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock15" type="Sprite2D" parent="Foreground" index="3"]
+position = Vector2(376, 240)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock4" type="Sprite2D" parent="Foreground/Rock15" index="0"]
+position = Vector2(520, 304)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock16" type="Sprite2D" parent="Foreground" index="4"]
+position = Vector2(475, 280)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock4" type="Sprite2D" parent="Foreground/Rock16" index="0"]
+position = Vector2(520, 304)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock17" type="Sprite2D" parent="Foreground" index="5"]
+position = Vector2(424, 256)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="Rock4" type="Sprite2D" parent="Foreground/Rock17" index="0"]
+position = Vector2(520, 304)
+scale = Vector2(3, 3)
+texture = ExtResource("4_i58xx")
+
+[node name="TravaSObrysom7" type="Sprite2D" parent="Foreground/Rock17" index="1"]
+position = Vector2(32.3333, 5)
+texture = ExtResource("5_yiq0o")
+
+[node name="Next Level" parent="." index="11"]
+text = "PLAY AGAIN"
+
+[node name="Farmar" type="AnimatedSprite2D" parent="." index="12"]
+position = Vector2(56, 544)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ue6h7")
+autoplay = "default"
+
+[node name="Bublina_1" type="AnimatedSprite2D" parent="." index="13"]
+position = Vector2(60, 496)
+sprite_frames = SubResource("SpriteFrames_w65vq")
+autoplay = "default"
+
+[node name="Bublina_2" type="AnimatedSprite2D" parent="." index="14"]
+position = Vector2(44, 480)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_swllg")
+autoplay = "default"
+
+[node name="Bublina_3" type="AnimatedSprite2D" parent="." index="15"]
+position = Vector2(60, 464)
+sprite_frames = SubResource("SpriteFrames_fue0b")
+autoplay = "default"

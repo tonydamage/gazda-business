@@ -1,20 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://cujkponbs8jkv"]
+[gd_scene load_steps=6 format=3 uid="uid://cujkponbs8jkv"]
 
 [ext_resource type="PackedScene" uid="uid://c1spiqpafed37" path="res://level/level-base.tscn" id="1_poojm"]
 [ext_resource type="Texture2D" uid="uid://hemnm88x7m4y" path="res://art/rock.png" id="2_cllt5"]
 [ext_resource type="Texture2D" uid="uid://yavu4ji0uubp" path="res://art/Strom.png" id="3_6j21i"]
 [ext_resource type="PackedScene" uid="uid://dks6bgrce6eak" path="res://assets/plot_front.tscn" id="3_k02gx"]
+[ext_resource type="Texture2D" uid="uid://t283sh38wjua" path="res://art/strombigalter2.png" id="4_r5q3n"]
 
 [node name="BaseLevel" instance=ExtResource("1_poojm")]
 
 [node name="LevelBoundary" parent="." index="1"]
 visible = true
+metadata/_edit_group_ = true
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBoundary" index="1"]
-polygon = PackedVector2Array(544, 624, 528, 560, 496, 528, 432, 520, 360, 528, 288, 552, 232, 600, 200, 632, 168, 648, 136, 640, 128, 600, 152, 552, 208, 512, 280, 480, 352, 440, 400, 392, 424, 336, 424, 296, 392, 248, 352, 232, 336, 216, 592, 216, 768, 696, 680, 1056, 208, 1056, 216, 976, 320, 984, 392, 968, 480, 944, 520, 896, 544, 800, 568, 696)
+polygon = PackedVector2Array(544, 624, 528, 560, 496, 528, 432, 520, 360, 528, 288, 552, 248, 592, 216, 624, 184, 632, 152, 624, 144, 592, 160, 552, 184, 528, 208, 512, 240, 496, 280, 480, 352, 440, 400, 392, 424, 336, 424, 296, 392, 248, 352, 232, 336, 216, 592, 216, 768, 696, 680, 1056, 208, 1056, 216, 976, 320, 984, 392, 968, 480, 944, 520, 896, 544, 800, 568, 696)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelBoundary" index="2"]
-polygon = PackedVector2Array(-56, 1008, 8, 992, 168, 968, 112, 936, 112, 872, 152, 832, 208, 808, 264, 784, 304, 768, 320, 760, 320, 736, 296, 728, 256, 736, 200, 768, 128, 800, 56, 800, 32, 776, 8, 712, -8, 616, -8, 528, 16, 424, 64, 384, 144, 360, 200, 328, 216, 296, 216, 248, 200, 208, -64, 208, -56, 912)
+polygon = PackedVector2Array(-56, 1008, 8, 992, 168, 968, 112, 936, 112, 872, 152, 832, 208, 808, 264, 784, 304, 768, 320, 760, 320, 736, 296, 728, 256, 736, 200, 768, 160, 784, 96, 800, 56, 792, 32, 760, 8, 712, 0, 624, 0, 528, 0, 472, 16, 424, 40, 400, 64, 384, 104, 368, 144, 360, 200, 328, 216, 296, 216, 248, 200, 208, -64, 208, -56, 912)
 
 [node name="CanvasGroup" type="CanvasGroup" parent="." index="4"]
 
@@ -69,7 +71,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("2_cllt5")
 
 [node name="Rock11" type="Sprite2D" parent="CanvasGroup" index="10"]
-position = Vector2(168, 616)
+position = Vector2(200, 608)
 scale = Vector2(3, 3)
 texture = ExtResource("2_cllt5")
 
@@ -233,46 +235,31 @@ position = Vector2(475, 296)
 scale = Vector2(3, 3)
 texture = ExtResource("3_6j21i")
 
-[node name="Strom20" type="Sprite2D" parent="CanvasGroup" index="43"]
-position = Vector2(464, 352)
-scale = Vector2(3, 3)
-texture = ExtResource("3_6j21i")
-
-[node name="Strom22" type="Sprite2D" parent="CanvasGroup" index="44"]
+[node name="Strom22" type="Sprite2D" parent="CanvasGroup" index="43"]
 position = Vector2(530, 316)
 scale = Vector2(3, 3)
 texture = ExtResource("3_6j21i")
 
-[node name="Strom21" type="Sprite2D" parent="CanvasGroup" index="45"]
-position = Vector2(504, 368)
-scale = Vector2(3, 3)
-texture = ExtResource("3_6j21i")
-
-[node name="Strom23" type="Sprite2D" parent="CanvasGroup" index="46"]
-position = Vector2(464, 400)
-scale = Vector2(3, 3)
-texture = ExtResource("3_6j21i")
-
-[node name="Strom24" type="Sprite2D" parent="CanvasGroup" index="47"]
-position = Vector2(512, 409)
-scale = Vector2(3, 3)
-texture = ExtResource("3_6j21i")
-
-[node name="Strom25" type="Sprite2D" parent="CanvasGroup" index="48"]
+[node name="Strom25" type="Sprite2D" parent="CanvasGroup" index="44"]
 position = Vector2(432, 436)
 scale = Vector2(3, 3)
 texture = ExtResource("3_6j21i")
 
-[node name="Strom26" type="Sprite2D" parent="CanvasGroup" index="49"]
-position = Vector2(488, 448)
+[node name="Strombigalter3" type="Sprite2D" parent="CanvasGroup" index="45"]
+position = Vector2(492, 392)
 scale = Vector2(3, 3)
-texture = ExtResource("3_6j21i")
+texture = ExtResource("4_r5q3n")
+
+[node name="Strombigalter4" type="Sprite2D" parent="CanvasGroup" index="46"]
+position = Vector2(28, 848)
+scale = Vector2(3, 3)
+texture = ExtResource("4_r5q3n")
 
 [node name="Images@plot_front" parent="." index="5" instance=ExtResource("3_k02gx")]
 position = Vector2(296, 352)
 scale = Vector2(3, 3)
 
-[node name="Sheep3" parent="Sheeps" index="0"]
+[node name="Sheep3" parent="Sheeps" index="1"]
 position = Vector2(440, 800)
 
 [node name="Dog" parent="." index="7"]
@@ -285,3 +272,6 @@ texture = ExtResource("2_cllt5")
 
 [node name="Rock" parent="Paleta" index="1"]
 visible = false
+
+[node name="Next Level" parent="." index="12"]
+PathToNextLevel = "res://level/mini-pen.tscn"

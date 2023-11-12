@@ -14,7 +14,7 @@
 visible = true
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBoundary" index="1"]
-polygon = PackedVector2Array(-8, 816, 24, 760, 72, 704, 144, 656, 216, 616, 264, 600, 304, 568, 304, 536, 280, 504, 208, 464, 136, 432, 80, 384, 56, 328, 40, 280, 48, 248, 88, 216, 88, 192, -40, 168, -48, 824)
+polygon = PackedVector2Array(-8, 816, 24, 760, 72, 704, 144, 656, 216, 616, 264, 600, 304, 568, 304, 536, 280, 504, 208, 464, 136, 432, 80, 384, 64, 344, 48, 296, 56, 256, 72, 232, 88, 216, 88, 192, -40, 168, -48, 824)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelBoundary" index="2"]
 polygon = PackedVector2Array(256, 192, 288, 272, 352, 328, 416, 368, 456, 408, 496, 448, 520, 496, 544, 576, 552, 656, 592, 816, 688, 816, 768, 192)
@@ -327,5 +327,5 @@ position = Vector2(448, 712)
 [node name="Dog" parent="." index="7"]
 position = Vector2(261, 888)
 
-[node name="Next Level" parent="." index="9"]
+[node name="Next Level" parent="." index="11"]
 PathToNextLevel = "res://level/nano_level.tscn"
