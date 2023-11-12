@@ -19,3 +19,13 @@ func _process(_delta):
 			sheepInArea += 1
 	if (sheepInArea >= requiredSheep):
 		allSheepInArea.emit()
+
+
+func _on_body_entered(body):
+	if body is Sheep:
+		body.IsInPen = true
+
+
+func _on_body_exited(body):
+	if body is Sheep:
+		body.IsInPen = false

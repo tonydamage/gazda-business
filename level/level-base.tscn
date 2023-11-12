@@ -150,6 +150,8 @@ stream = ExtResource("14_6e242")
 
 [connection signal="allSheepInArea" from="SheepPen" to="." method="_on_sheep_pen_all_sheep_in_area"]
 [connection signal="allSheepInArea" from="SheepPen" to="Next Level" method="_on_sheep_pen_all_sheep_in_area"]
+[connection signal="body_entered" from="SheepPen" to="SheepPen" method="_on_body_entered"]
+[connection signal="body_exited" from="SheepPen" to="SheepPen" method="_on_body_exited"]
 [connection signal="button_up" from="MenuButton" to="MenuButton" method="_on_button_up"]
 [connection signal="button_up" from="ResetButton" to="ResetButton" method="_on_button_up"]
 [connection signal="pressed" from="Next Level" to="Next Level" method="_on_pressed"]

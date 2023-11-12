@@ -2,6 +2,7 @@ extends RigidBody2D
 class_name Sheep
 
 @export var AppearEffect: AudioStreamPlayer = null
+@export var IsInPen = false;
 
 var start_pos = Vector2.ZERO
 var reset = false;
